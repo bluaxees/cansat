@@ -1,0 +1,280 @@
+   1              	 .cpu cortex-m0
+   2              	 .fpu softvfp
+   3              	 .eabi_attribute 20,1
+   4              	 .eabi_attribute 21,1
+   5              	 .eabi_attribute 23,3
+   6              	 .eabi_attribute 24,1
+   7              	 .eabi_attribute 25,1
+   8              	 .eabi_attribute 26,1
+   9              	 .eabi_attribute 30,4
+  10              	 .eabi_attribute 34,0
+  11              	 .eabi_attribute 18,4
+  12              	 .code 16
+  13              	 .file "main.c"
+  14              	 .section .text.delay,"ax",%progbits
+  15              	 .align 1
+  16              	 .global delay
+  17              	 .code 16
+  18              	 .thumb_func
+  20              	delay:
+  21              	 
+  22 0000 7047     	 bx lr
+  24              	 .section .text.is_even_parity,"ax",%progbits
+  25              	 .align 1
+  26              	 .global is_even_parity
+  27              	 .code 16
+  28              	 .thumb_func
+  30              	is_even_parity:
+  31 0000 0022     	 mov r2,#0
+  32              	.L3:
+  33 0002 0123     	 mov r3,#1
+  34 0004 0028     	 cmp r0,#0
+  35 0006 03D0     	 beq .L9
+  36 0008 0340     	 and r3,r0
+  37 000a D218     	 add r2,r2,r3
+  38 000c 4008     	 lsr r0,r0,#1
+  39 000e F8E7     	 b .L3
+  40              	.L9:
+  41 0010 9343     	 bic r3,r2
+  42 0012 181C     	 mov r0,r3
+  43              	 
+  44 0014 7047     	 bx lr
+  46              	 .section .text.get_bitstream,"ax",%progbits
+  47              	 .align 1
+  48              	 .global get_bitstream
+  49              	 .code 16
+  50              	 .thumb_func
+  52              	get_bitstream:
+  53 0000 F0B5     	 push {r4,r5,r6,r7,lr}
+  54 0002 B7B0     	 sub sp,sp,#220
+  55 0004 16AB     	 add r3,sp,#88
+  56 0006 1C1C     	 mov r4,r3
+  57 0008 01AD     	 add r5,sp,#4
+  58              	.L13:
+  59 000a 0028     	 cmp r0,#0
+  60 000c 01D1     	 bne .L11
+  61 000e 1860     	 str r0,[r3]
+  62 0010 03E0     	 b .L12
+  63              	.L11:
+  64 0012 0122     	 mov r2,#1
+  65 0014 0240     	 and r2,r0
+  66 0016 1A60     	 str r2,[r3]
+  67 0018 4008     	 lsr r0,r0,#1
+  68              	.L12:
+  69 001a 043B     	 sub r3,r3,#4
+  70 001c AB42     	 cmp r3,r5
+  71 001e F4D1     	 bne .L13
+  72 0020 35AB     	 add r3,sp,#212
+  73              	.L16:
+  74 0022 0029     	 cmp r1,#0
+  75 0024 01D1     	 bne .L14
+  76 0026 1960     	 str r1,[r3]
+  77 0028 03E0     	 b .L15
+  78              	.L14:
+  79 002a 0122     	 mov r2,#1
+  80 002c 0A40     	 and r2,r1
+  81 002e 1A60     	 str r2,[r3]
+  82 0030 4908     	 lsr r1,r1,#1
+  83              	.L15:
+  84 0032 043B     	 sub r3,r3,#4
+  85 0034 9C42     	 cmp r4,r3
+  86 0036 F4D1     	 bne .L16
+  87 0038 0127     	 mov r7,#1
+  88 003a 3D1C     	 mov r5,r7
+  89 003c 1D4B     	 ldr r3,.L23
+  90 003e 1E4A     	 ldr r2,.L23+4
+  91 0040 197B     	 ldrb r1,[r3,#12]
+  92 0042 1068     	 ldr r0,[r2]
+  93 0044 8D40     	 lsl r5,r5,r1
+  94 0046 0195     	 str r5,[sp,#4]
+  95 0048 8025     	 mov r5,#128
+  96 004a 6D02     	 lsl r5,r5,#9
+  97 004c 2E1C     	 mov r6,r5
+  98 004e 8D40     	 lsl r5,r5,r1
+  99 0050 127B     	 ldrb r2,[r2,#12]
+ 100 0052 291C     	 mov r1,r5
+ 101 0054 9640     	 lsl r6,r6,r2
+ 102 0056 9740     	 lsl r7,r7,r2
+ 103 0058 0022     	 mov r2,#0
+ 104 005a 1C68     	 ldr r4,[r3]
+ 105              	.L19:
+ 106 005c 02AD     	 add r5,sp,#8
+ 107 005e 5559     	 ldr r5,[r2,r5]
+ 108 0060 012D     	 cmp r5,#1
+ 109 0062 03D1     	 bne .L17
+ 110 0064 019D     	 ldr r5,[sp,#4]
+ 111 0066 6560     	 str r5,[r4,#4]
+ 112 0068 4660     	 str r6,[r0,#4]
+ 113 006a 01E0     	 b .L18
+ 114              	.L17:
+ 115 006c 6160     	 str r1,[r4,#4]
+ 116 006e 4760     	 str r7,[r0,#4]
+ 117              	.L18:
+ 118 0070 0432     	 add r2,r2,#4
+ 119 0072 542A     	 cmp r2,#84
+ 120 0074 F2D1     	 bne .L19
+ 121 0076 8020     	 mov r0,#128
+ 122 0078 197B     	 ldrb r1,[r3,#12]
+ 123 007a 533A     	 sub r2,r2,#83
+ 124 007c 4002     	 lsl r0,r0,#9
+ 125 007e 161C     	 mov r6,r2
+ 126 0080 071C     	 mov r7,r0
+ 127 0082 8840     	 lsl r0,r0,r1
+ 128 0084 1C68     	 ldr r4,[r3]
+ 129 0086 0C4B     	 ldr r3,.L23+4
+ 130 0088 8E40     	 lsl r6,r6,r1
+ 131 008a 1D68     	 ldr r5,[r3]
+ 132 008c 1B7B     	 ldrb r3,[r3,#12]
+ 133 008e 011C     	 mov r1,r0
+ 134 0090 9F40     	 lsl r7,r7,r3
+ 135 0092 9A40     	 lsl r2,r2,r3
+ 136 0094 0023     	 mov r3,#0
+ 137              	.L22:
+ 138 0096 17A8     	 add r0,sp,#92
+ 139 0098 1858     	 ldr r0,[r3,r0]
+ 140 009a 0128     	 cmp r0,#1
+ 141 009c 02D1     	 bne .L20
+ 142 009e 6660     	 str r6,[r4,#4]
+ 143 00a0 6F60     	 str r7,[r5,#4]
+ 144 00a2 01E0     	 b .L21
+ 145              	.L20:
+ 146 00a4 6160     	 str r1,[r4,#4]
+ 147 00a6 6A60     	 str r2,[r5,#4]
+ 148              	.L21:
+ 149 00a8 0433     	 add r3,r3,#4
+ 150 00aa 7C2B     	 cmp r3,#124
+ 151 00ac F3D1     	 bne .L22
+ 152 00ae 37B0     	 add sp,sp,#220
+ 153              	 
+ 154 00b0 F0BD     	 pop {r4,r5,r6,r7,pc}
+ 155              	.L24:
+ 156 00b2 C046     	 .align 2
+ 157              	.L23:
+ 158 00b4 00000000 	 .word DIGITAL_IO_0
+ 159 00b8 00000000 	 .word DIGITAL_IO_1
+ 161              	 .section .text.VADC0_C0_1_IRQHandler,"ax",%progbits
+ 162              	 .align 1
+ 163              	 .global VADC0_C0_1_IRQHandler
+ 164              	 .code 16
+ 165              	 .thumb_func
+ 167              	VADC0_C0_1_IRQHandler:
+ 168 0000 F7B5     	 push {r0,r1,r2,r4,r5,r6,r7,lr}
+ 169 0002 1C4D     	 ldr r5,.L34
+ 170 0004 1C4F     	 ldr r7,.L34+4
+ 171 0006 2B68     	 ldr r3,[r5]
+ 172 0008 032B     	 cmp r3,#3
+ 173 000a 28D1     	 bne .L26
+ 174 000c 0023     	 mov r3,#0
+ 175 000e 3C88     	 ldrh r4,[r7]
+ 176 0010 2B60     	 str r3,[r5]
+ 177 0012 201C     	 mov r0,r4
+ 178 0014 FFF7FEFF 	 bl is_even_parity
+ 179 0018 184B     	 ldr r3,.L34+8
+ 180 001a 6400     	 lsl r4,r4,#1
+ 181 001c E318     	 add r3,r4,r3
+ 182 001e 0193     	 str r3,[sp,#4]
+ 183 0020 0128     	 cmp r0,#1
+ 184 0022 03D1     	 bne .L28
+ 185 0024 FE23     	 mov r3,#254
+ 186 0026 5B03     	 lsl r3,r3,#13
+ 187 0028 E318     	 add r3,r4,r3
+ 188 002a 0193     	 str r3,[sp,#4]
+ 189              	.L28:
+ 190 002c 7C88     	 ldrh r4,[r7,#2]
+ 191 002e 201C     	 mov r0,r4
+ 192 0030 FFF7FEFF 	 bl is_even_parity
+ 193 0034 124B     	 ldr r3,.L34+12
+ 194 0036 2405     	 lsl r4,r4,#20
+ 195 0038 E618     	 add r6,r4,r3
+ 196 003a 0128     	 cmp r0,#1
+ 197 003c 00D1     	 bne .L30
+ 198 003e 661C     	 add r6,r4,#1
+ 199              	.L30:
+ 200 0040 BC88     	 ldrh r4,[r7,#4]
+ 201 0042 201C     	 mov r0,r4
+ 202 0044 FFF7FEFF 	 bl is_even_parity
+ 203 0048 A401     	 lsl r4,r4,#6
+ 204 004a 0128     	 cmp r0,#1
+ 205 004c 00D0     	 beq .L33
+ 206 004e 2034     	 add r4,r4,#32
+ 207              	.L33:
+ 208 0050 0198     	 ldr r0,[sp,#4]
+ 209 0052 A119     	 add r1,r4,r6
+ 210 0054 FFF7FEFF 	 bl get_bitstream
+ 211 0058 0A48     	 ldr r0,.L34+16
+ 212 005a FFF7FEFF 	 bl ADC_MEASUREMENT_StartConversion
+ 213              	.L26:
+ 214 005e C022     	 mov r2,#192
+ 215 0060 0949     	 ldr r1,.L34+20
+ 216 0062 2B68     	 ldr r3,[r5]
+ 217 0064 9200     	 lsl r2,r2,#2
+ 218 0066 8958     	 ldr r1,[r1,r2]
+ 219 0068 5A00     	 lsl r2,r3,#1
+ 220 006a 0133     	 add r3,r3,#1
+ 221 006c B952     	 strh r1,[r7,r2]
+ 222 006e 2B60     	 str r3,[r5]
+ 223              	 
+ 224 0070 F7BD     	 pop {r0,r1,r2,r4,r5,r6,r7,pc}
+ 225              	.L35:
+ 226 0072 C046     	 .align 2
+ 227              	.L34:
+ 228 0074 00000000 	 .word .LANCHOR0
+ 229 0078 00000000 	 .word results
+ 230 007c 01C01F00 	 .word 2080769
+ 231 0080 01000400 	 .word 262145
+ 232 0084 00000000 	 .word ADC_MEASUREMENT_0
+ 233 0088 00000348 	 .word 1208156160
+ 235              	 .section .text.startup.main,"ax",%progbits
+ 236              	 .align 1
+ 237              	 .global main
+ 238              	 .code 16
+ 239              	 .thumb_func
+ 241              	main:
+ 242 0000 08B5     	 push {r3,lr}
+ 243 0002 FFF7FEFF 	 bl DAVE_Init
+ 244 0006 0028     	 cmp r0,#0
+ 245 0008 00D0     	 beq .L37
+ 246              	.L38:
+ 247 000a FEE7     	 b .L38
+ 248              	.L37:
+ 249 000c 0148     	 ldr r0,.L40
+ 250 000e FFF7FEFF 	 bl ADC_MEASUREMENT_StartConversion
+ 251              	.L39:
+ 252 0012 FEE7     	 b .L39
+ 253              	.L41:
+ 254              	 .align 2
+ 255              	.L40:
+ 256 0014 00000000 	 .word ADC_MEASUREMENT_0
+ 258              	 .global n
+ 259              	 .comm results,6,2
+ 260              	 .section .data.n,"aw",%progbits
+ 261              	 .align 2
+ 262              	 .set .LANCHOR0,.+0
+ 265              	n:
+ 266 0000 03000000 	 .word 3
+ 267              	 .ident "GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20141119 (release) [ARM/embedded-4_9-branch revision 218278]"
+DEFINED SYMBOLS
+                            *ABS*:00000000 main.c
+    {standard input}:15     .text.delay:00000000 $t
+    {standard input}:20     .text.delay:00000000 delay
+    {standard input}:25     .text.is_even_parity:00000000 $t
+    {standard input}:30     .text.is_even_parity:00000000 is_even_parity
+    {standard input}:47     .text.get_bitstream:00000000 $t
+    {standard input}:52     .text.get_bitstream:00000000 get_bitstream
+    {standard input}:158    .text.get_bitstream:000000b4 $d
+    {standard input}:162    .text.VADC0_C0_1_IRQHandler:00000000 $t
+    {standard input}:167    .text.VADC0_C0_1_IRQHandler:00000000 VADC0_C0_1_IRQHandler
+    {standard input}:228    .text.VADC0_C0_1_IRQHandler:00000074 $d
+                            *COM*:00000006 results
+    {standard input}:236    .text.startup.main:00000000 $t
+    {standard input}:241    .text.startup.main:00000000 main
+    {standard input}:256    .text.startup.main:00000014 $d
+    {standard input}:265    .data.n:00000000 n
+    {standard input}:261    .data.n:00000000 $d
+
+UNDEFINED SYMBOLS
+DIGITAL_IO_0
+DIGITAL_IO_1
+ADC_MEASUREMENT_StartConversion
+ADC_MEASUREMENT_0
+DAVE_Init

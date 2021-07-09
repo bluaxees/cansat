@@ -1,0 +1,286 @@
+   1              	 .cpu cortex-m0
+   2              	 .fpu softvfp
+   3              	 .eabi_attribute 20,1
+   4              	 .eabi_attribute 21,1
+   5              	 .eabi_attribute 23,3
+   6              	 .eabi_attribute 24,1
+   7              	 .eabi_attribute 25,1
+   8              	 .eabi_attribute 26,1
+   9              	 .eabi_attribute 30,4
+  10              	 .eabi_attribute 34,0
+  11              	 .eabi_attribute 18,4
+  12              	 .code 16
+  13              	 .file "xmc_uart.c"
+  14              	 .section .text.XMC_UART_CH_Init,"ax",%progbits
+  15              	 .align 1
+  16              	 .global XMC_UART_CH_Init
+  17              	 .code 16
+  18              	 .thumb_func
+  20              	XMC_UART_CH_Init:
+  21 0000 70B5     	 push {r4,r5,r6,lr}
+  22 0002 0E1C     	 mov r6,r1
+  23 0004 041C     	 mov r4,r0
+  24 0006 FFF7FEFF 	 bl XMC_USIC_CH_Enable
+  25 000a 337A     	 ldrb r3,[r6,#8]
+  26 000c 1025     	 mov r5,#16
+  27 000e 002B     	 cmp r3,#0
+  28 0010 00D0     	 beq .L2
+  29 0012 1D1C     	 mov r5,r3
+  30              	.L2:
+  31 0014 3379     	 ldrb r3,[r6,#4]
+  32 0016 201C     	 mov r0,r4
+  33 0018 3168     	 ldr r1,[r6]
+  34 001a 2A1C     	 mov r2,r5
+  35 001c 002B     	 cmp r3,#0
+  36 001e 02D0     	 beq .L3
+  37 0020 FFF7FEFF 	 bl XMC_USIC_CH_SetBaudrateEx
+  38 0024 01E0     	 b .L4
+  39              	.L3:
+  40 0026 FFF7FEFF 	 bl XMC_USIC_CH_SetBaudrate
+  41              	.L4:
+  42 002a F379     	 ldrb r3,[r6,#7]
+  43 002c 134A     	 ldr r2,.L11
+  44 002e 013B     	 sub r3,r3,#1
+  45 0030 5B00     	 lsl r3,r3,#1
+  46 0032 1343     	 orr r3,r2
+  47 0034 8122     	 mov r2,#129
+  48 0036 6D08     	 lsr r5,r5,#1
+  49 0038 0135     	 add r5,r5,#1
+  50 003a 2D02     	 lsl r5,r5,#8
+  51 003c 1D43     	 orr r5,r3
+  52 003e E563     	 str r5,[r4,#60]
+  53 0040 7379     	 ldrb r3,[r6,#5]
+  54 0042 5200     	 lsl r2,r2,#1
+  55 0044 013B     	 sub r3,r3,#1
+  56 0046 1B06     	 lsl r3,r3,#24
+  57 0048 1343     	 orr r3,r2
+  58 004a 6363     	 str r3,[r4,#52]
+  59 004c B379     	 ldrb r3,[r6,#6]
+  60 004e 002B     	 cmp r3,#0
+  61 0050 04D0     	 beq .L5
+  62 0052 626B     	 ldr r2,[r4,#52]
+  63 0054 013B     	 sub r3,r3,#1
+  64 0056 1B04     	 lsl r3,r3,#16
+  65 0058 1343     	 orr r3,r2
+  66 005a 04E0     	 b .L9
+  67              	.L5:
+  68 005c 7279     	 ldrb r2,[r6,#5]
+  69 005e 616B     	 ldr r1,[r4,#52]
+  70 0060 531E     	 sub r3,r2,#1
+  71 0062 1B04     	 lsl r3,r3,#16
+  72 0064 0B43     	 orr r3,r1
+  73              	.L9:
+  74 0066 6363     	 str r3,[r4,#52]
+  75 0068 A023     	 mov r3,#160
+  76 006a DB00     	 lsl r3,r3,#3
+  77 006c A363     	 str r3,[r4,#56]
+  78 006e 0123     	 mov r3,#1
+  79 0070 5B42     	 neg r3,r3
+  80 0072 E364     	 str r3,[r4,#76]
+  81 0074 7389     	 ldrh r3,[r6,#10]
+  82              	 
+  83 0076 2364     	 str r3,[r4,#64]
+  84 0078 70BD     	 pop {r4,r5,r6,pc}
+  85              	.L12:
+  86 007a C046     	 .align 2
+  87              	.L11:
+  88 007c 01000300 	 .word 196609
+  90              	 .section .text.XMC_UART_CH_SetBaudrate,"ax",%progbits
+  91              	 .align 1
+  92              	 .global XMC_UART_CH_SetBaudrate
+  93              	 .code 16
+  94              	 .thumb_func
+  96              	XMC_UART_CH_SetBaudrate:
+  97 0000 70B5     	 push {r4,r5,r6,lr}
+  98 0002 061C     	 mov r6,r0
+  99 0004 0D1C     	 mov r5,r1
+ 100 0006 141C     	 mov r4,r2
+ 101 0008 FFF7FEFF 	 bl XMC_SCU_CLOCK_GetPeripheralClockFrequency
+ 102 000c 8308     	 lsr r3,r0,#2
+ 103 000e 0120     	 mov r0,#1
+ 104 0010 9D42     	 cmp r5,r3
+ 105 0012 09D8     	 bhi .L14
+ 106 0014 032C     	 cmp r4,#3
+ 107 0016 07D9     	 bls .L14
+ 108 0018 301C     	 mov r0,r6
+ 109 001a 291C     	 mov r1,r5
+ 110 001c 221C     	 mov r2,r4
+ 111 001e FFF7FEFF 	 bl XMC_USIC_CH_SetBaudrate
+ 112 0022 431E     	 sub r3,r0,#1
+ 113 0024 9841     	 sbc r0,r0,r3
+ 114 0026 C0B2     	 uxtb r0,r0
+ 115              	.L14:
+ 116              	 
+ 117 0028 70BD     	 pop {r4,r5,r6,pc}
+ 119              	 .section .text.XMC_UART_CH_SetBaudrateEx,"ax",%progbits
+ 120              	 .align 1
+ 121              	 .global XMC_UART_CH_SetBaudrateEx
+ 122              	 .code 16
+ 123              	 .thumb_func
+ 125              	XMC_UART_CH_SetBaudrateEx:
+ 126 0000 F8B5     	 push {r3,r4,r5,r6,r7,lr}
+ 127 0002 1F1C     	 mov r7,r3
+ 128 0004 061C     	 mov r6,r0
+ 129 0006 0D1C     	 mov r5,r1
+ 130 0008 141C     	 mov r4,r2
+ 131 000a FFF7FEFF 	 bl XMC_SCU_CLOCK_GetPeripheralClockFrequency
+ 132 000e 8308     	 lsr r3,r0,#2
+ 133 0010 0120     	 mov r0,#1
+ 134 0012 9D42     	 cmp r5,r3
+ 135 0014 0BD8     	 bhi .L18
+ 136 0016 032C     	 cmp r4,#3
+ 137 0018 09D9     	 bls .L18
+ 138 001a 301C     	 mov r0,r6
+ 139 001c 291C     	 mov r1,r5
+ 140 001e 221C     	 mov r2,r4
+ 141 0020 002F     	 cmp r7,#0
+ 142 0022 02D0     	 beq .L19
+ 143 0024 FFF7FEFF 	 bl XMC_USIC_CH_SetBaudrateEx
+ 144 0028 01E0     	 b .L18
+ 145              	.L19:
+ 146 002a FFF7FEFF 	 bl XMC_USIC_CH_SetBaudrate
+ 147              	.L18:
+ 148              	 
+ 149 002e F8BD     	 pop {r3,r4,r5,r6,r7,pc}
+ 151              	 .section .text.XMC_UART_CH_Transmit,"ax",%progbits
+ 152              	 .align 1
+ 153              	 .global XMC_UART_CH_Transmit
+ 154              	 .code 16
+ 155              	 .thumb_func
+ 157              	XMC_UART_CH_Transmit:
+ 158 0000 031C     	 mov r3,r0
+ 159 0002 FC33     	 add r3,r3,#252
+ 160 0004 DA68     	 ldr r2,[r3,#12]
+ 161 0006 E023     	 mov r3,#224
+ 162 0008 DB04     	 lsl r3,r3,#19
+ 163 000a 1A42     	 tst r2,r3
+ 164 000c 0BD1     	 bne .L23
+ 165              	.L24:
+ 166 000e 7F22     	 mov r2,#127
+ 167 0010 836B     	 ldr r3,[r0,#56]
+ 168 0012 9343     	 bic r3,r2
+ 169 0014 DBB2     	 uxtb r3,r3
+ 170 0016 802B     	 cmp r3,#128
+ 171 0018 F9D0     	 beq .L24
+ 172 001a 8023     	 mov r3,#128
+ 173 001c 9B01     	 lsl r3,r3,#6
+ 174 001e C364     	 str r3,[r0,#76]
+ 175 0020 0430     	 add r0,r0,#4
+ 176 0022 C167     	 str r1,[r0,#124]
+ 177 0024 02E0     	 b .L22
+ 178              	.L23:
+ 179 0026 C023     	 mov r3,#192
+ 180 0028 5B00     	 lsl r3,r3,#1
+ 181 002a C150     	 str r1,[r0,r3]
+ 182              	.L22:
+ 183              	 
+ 184 002c 7047     	 bx lr
+ 186              	 .section .text.XMC_UART_CH_GetReceivedData,"ax",%progbits
+ 187              	 .align 1
+ 188              	 .global XMC_UART_CH_GetReceivedData
+ 189              	 .code 16
+ 190              	 .thumb_func
+ 192              	XMC_UART_CH_GetReceivedData:
+ 193 0000 031C     	 mov r3,r0
+ 194 0002 E022     	 mov r2,#224
+ 195 0004 FC33     	 add r3,r3,#252
+ 196 0006 1969     	 ldr r1,[r3,#16]
+ 197 0008 D204     	 lsl r2,r2,#19
+ 198 000a 1142     	 tst r1,r2
+ 199 000c 01D1     	 bne .L28
+ 200 000e 406D     	 ldr r0,[r0,#84]
+ 201 0010 00E0     	 b .L30
+ 202              	.L28:
+ 203 0012 186A     	 ldr r0,[r3,#32]
+ 204              	.L30:
+ 205 0014 80B2     	 uxth r0,r0
+ 206              	 
+ 207 0016 7047     	 bx lr
+ 209              	 .section .text.XMC_UART_CH_Stop,"ax",%progbits
+ 210              	 .align 1
+ 211              	 .global XMC_UART_CH_Stop
+ 212              	 .code 16
+ 213              	 .thumb_func
+ 215              	XMC_UART_CH_Stop:
+ 216 0000 836B     	 ldr r3,[r0,#56]
+ 217 0002 021C     	 mov r2,r0
+ 218 0004 0220     	 mov r0,#2
+ 219 0006 1B06     	 lsl r3,r3,#24
+ 220 0008 09D4     	 bmi .L32
+ 221 000a 8023     	 mov r3,#128
+ 222 000c 916C     	 ldr r1,[r2,#72]
+ 223 000e 9B00     	 lsl r3,r3,#2
+ 224 0010 0B40     	 and r3,r1
+ 225 0012 04D1     	 bne .L32
+ 226 0014 116C     	 ldr r1,[r2,#64]
+ 227 0016 0D30     	 add r0,r0,#13
+ 228 0018 8143     	 bic r1,r0
+ 229 001a 181C     	 mov r0,r3
+ 230 001c 1164     	 str r1,[r2,#64]
+ 231              	.L32:
+ 232              	 
+ 233 001e 7047     	 bx lr
+ 235              	 .section .text.XMC_UART_CH_EnableEvent,"ax",%progbits
+ 236              	 .align 1
+ 237              	 .global XMC_UART_CH_EnableEvent
+ 238              	 .code 16
+ 239              	 .thumb_func
+ 241              	XMC_UART_CH_EnableEvent:
+ 242 0000 FE23     	 mov r3,#254
+ 243 0002 026C     	 ldr r2,[r0,#64]
+ 244 0004 5B02     	 lsl r3,r3,#9
+ 245 0006 0B40     	 and r3,r1
+ 246 0008 1343     	 orr r3,r2
+ 247 000a F822     	 mov r2,#248
+ 248 000c 0364     	 str r3,[r0,#64]
+ 249 000e C36B     	 ldr r3,[r0,#60]
+ 250 0010 1140     	 and r1,r2
+ 251 0012 1943     	 orr r1,r3
+ 252 0014 C163     	 str r1,[r0,#60]
+ 253              	 
+ 254 0016 7047     	 bx lr
+ 256              	 .section .text.XMC_UART_CH_DisableEvent,"ax",%progbits
+ 257              	 .align 1
+ 258              	 .global XMC_UART_CH_DisableEvent
+ 259              	 .code 16
+ 260              	 .thumb_func
+ 262              	XMC_UART_CH_DisableEvent:
+ 263 0000 FE22     	 mov r2,#254
+ 264 0002 036C     	 ldr r3,[r0,#64]
+ 265 0004 5202     	 lsl r2,r2,#9
+ 266 0006 0A40     	 and r2,r1
+ 267 0008 9343     	 bic r3,r2
+ 268 000a F822     	 mov r2,#248
+ 269 000c 0364     	 str r3,[r0,#64]
+ 270 000e C36B     	 ldr r3,[r0,#60]
+ 271 0010 1140     	 and r1,r2
+ 272 0012 8B43     	 bic r3,r1
+ 273 0014 C363     	 str r3,[r0,#60]
+ 274              	 
+ 275 0016 7047     	 bx lr
+ 277              	 .ident "GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20141119 (release) [ARM/embedded-4_9-branch revision 218278]"
+DEFINED SYMBOLS
+                            *ABS*:00000000 xmc_uart.c
+    {standard input}:15     .text.XMC_UART_CH_Init:00000000 $t
+    {standard input}:20     .text.XMC_UART_CH_Init:00000000 XMC_UART_CH_Init
+    {standard input}:88     .text.XMC_UART_CH_Init:0000007c $d
+    {standard input}:91     .text.XMC_UART_CH_SetBaudrate:00000000 $t
+    {standard input}:96     .text.XMC_UART_CH_SetBaudrate:00000000 XMC_UART_CH_SetBaudrate
+    {standard input}:120    .text.XMC_UART_CH_SetBaudrateEx:00000000 $t
+    {standard input}:125    .text.XMC_UART_CH_SetBaudrateEx:00000000 XMC_UART_CH_SetBaudrateEx
+    {standard input}:152    .text.XMC_UART_CH_Transmit:00000000 $t
+    {standard input}:157    .text.XMC_UART_CH_Transmit:00000000 XMC_UART_CH_Transmit
+    {standard input}:187    .text.XMC_UART_CH_GetReceivedData:00000000 $t
+    {standard input}:192    .text.XMC_UART_CH_GetReceivedData:00000000 XMC_UART_CH_GetReceivedData
+    {standard input}:210    .text.XMC_UART_CH_Stop:00000000 $t
+    {standard input}:215    .text.XMC_UART_CH_Stop:00000000 XMC_UART_CH_Stop
+    {standard input}:236    .text.XMC_UART_CH_EnableEvent:00000000 $t
+    {standard input}:241    .text.XMC_UART_CH_EnableEvent:00000000 XMC_UART_CH_EnableEvent
+    {standard input}:257    .text.XMC_UART_CH_DisableEvent:00000000 $t
+    {standard input}:262    .text.XMC_UART_CH_DisableEvent:00000000 XMC_UART_CH_DisableEvent
+
+UNDEFINED SYMBOLS
+XMC_USIC_CH_Enable
+XMC_USIC_CH_SetBaudrateEx
+XMC_USIC_CH_SetBaudrate
+XMC_SCU_CLOCK_GetPeripheralClockFrequency

@@ -1,0 +1,81 @@
+   1              	 .cpu cortex-m0
+   2              	 .fpu softvfp
+   3              	 .eabi_attribute 20,1
+   4              	 .eabi_attribute 21,1
+   5              	 .eabi_attribute 23,3
+   6              	 .eabi_attribute 24,1
+   7              	 .eabi_attribute 25,1
+   8              	 .eabi_attribute 26,1
+   9              	 .eabi_attribute 30,4
+  10              	 .eabi_attribute 34,0
+  11              	 .eabi_attribute 18,4
+  12              	 .code 16
+  13              	 .file "global_adc.c"
+  14              	 .section .text.GLOBAL_ADC_GetAppVersion,"ax",%progbits
+  15              	 .align 1
+  16              	 .global GLOBAL_ADC_GetAppVersion
+  17              	 .code 16
+  18              	 .thumb_func
+  20              	GLOBAL_ADC_GetAppVersion:
+  21 0000 0148     	 ldr r0,.L2
+  22 0002 82B0     	 sub sp,sp,#8
+  23 0004 02B0     	 add sp,sp,#8
+  24              	 
+  25 0006 7047     	 bx lr
+  26              	.L3:
+  27              	 .align 2
+  28              	.L2:
+  29 0008 04001600 	 .word 1441796
+  31              	 .section .text.GLOBAL_ADC_Init,"ax",%progbits
+  32              	 .align 1
+  33              	 .global GLOBAL_ADC_Init
+  34              	 .code 16
+  35              	 .thumb_func
+  37              	GLOBAL_ADC_Init:
+  38 0000 10B5     	 push {r4,lr}
+  39 0002 037C     	 ldrb r3,[r0,#16]
+  40 0004 041C     	 mov r4,r0
+  41 0006 022B     	 cmp r3,#2
+  42 0008 15D1     	 bne .L5
+  43 000a 4068     	 ldr r0,[r0,#4]
+  44 000c 2168     	 ldr r1,[r4]
+  45 000e FFF7FEFF 	 bl XMC_VADC_GLOBAL_Init
+  46 0012 8020     	 mov r0,#128
+  47 0014 A168     	 ldr r1,[r4,#8]
+  48 0016 0002     	 lsl r0,r0,#8
+  49 0018 0B6C     	 ldr r3,[r1,#64]
+  50 001a 0A6C     	 ldr r2,[r1,#64]
+  51 001c 1043     	 orr r0,r2
+  52 001e 074A     	 ldr r2,.L11
+  53 0020 1340     	 and r3,r2
+  54 0022 0343     	 orr r3,r0
+  55 0024 0B64     	 str r3,[r1,#64]
+  56 0026 637C     	 ldrb r3,[r4,#17]
+  57 0028 002B     	 cmp r3,#0
+  58 002a 02D0     	 beq .L6
+  59 002c 6068     	 ldr r0,[r4,#4]
+  60 002e FFF7FEFF 	 bl XMC_VADC_GLOBAL_StartupCalibration
+  61              	.L6:
+  62 0032 0023     	 mov r3,#0
+  63 0034 2374     	 strb r3,[r4,#16]
+  64              	.L5:
+  65 0036 207C     	 ldrb r0,[r4,#16]
+  66              	 
+  67 0038 10BD     	 pop {r4,pc}
+  68              	.L12:
+  69 003a C046     	 .align 2
+  70              	.L11:
+  71 003c FFF3FFFF 	 .word -3073
+  73              	 .ident "GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20141119 (release) [ARM/embedded-4_9-branch revision 218278]"
+DEFINED SYMBOLS
+                            *ABS*:00000000 global_adc.c
+    {standard input}:15     .text.GLOBAL_ADC_GetAppVersion:00000000 $t
+    {standard input}:20     .text.GLOBAL_ADC_GetAppVersion:00000000 GLOBAL_ADC_GetAppVersion
+    {standard input}:29     .text.GLOBAL_ADC_GetAppVersion:00000008 $d
+    {standard input}:32     .text.GLOBAL_ADC_Init:00000000 $t
+    {standard input}:37     .text.GLOBAL_ADC_Init:00000000 GLOBAL_ADC_Init
+    {standard input}:71     .text.GLOBAL_ADC_Init:0000003c $d
+
+UNDEFINED SYMBOLS
+XMC_VADC_GLOBAL_Init
+XMC_VADC_GLOBAL_StartupCalibration

@@ -1,0 +1,846 @@
+Jun 26, 2021 6:49:55 AM java.util.logging.LogManager$RootLogger log
+INFO: Start of solver :getFeasiblePins() : Sat Jun 26 06:49:55 SGT 2021
+
+
+Jun 26, 2021 6:49:55 AM java.util.logging.LogManager$RootLogger log
+INFO: 
+timeout(ask_feasible_mapping([reserved([vadc,_,global],'global_adc$1790945385$0'),
+reserved([vadc,_,group,0,config],'global_adc$1796505175$0'),
+reserved([vadc,_,group,1,config],'global_adc$1796505176$0'),
+reserved([scu,0,dco,_],'clock_xmc1$01180654739$0'),
+reserved([scu,0,ccu,config],'clock_xmc1$031780984$0'),
+reserved([vadc,_,backgnd],'adc_measurement$0919802633$0'),
+reserved([vadc,_,class,1],'adc_measurement$403379810$0'),
+reserved([vadc,_,class,0],'adc_measurement$1441772177$0'),
+reserved([p,_,pad,_],'adc_measurement$01412772712$0'),
+reserved([p,_,pad,_],'adc_measurement$01412772711$0'),
+reserved([p,_,pad,_],'adc_measurement$01412772710$0'),
+reserved([devicepackage,0,_],'adc_measurement$554415016$0'),
+uri([devicepackage,0,37],'adc_measurement$554415016$0'),
+reserved([devicepackage,0,_],'adc_measurement$554415017$0'),
+uri([devicepackage,0,38],'adc_measurement$554415017$0'),
+reserved([devicepackage,0,_],'adc_measurement$554415018$0'),
+uri([devicepackage,0,1],'adc_measurement$554415018$0'),
+reserved([vadc,0,group,_,ch,_],'adc_measurement$0733134899$0'),
+reserved([vadc,0,group,_,ch,_],'adc_measurement$0733134898$0'),
+reserved([vadc,0,group,_,ch,_],'adc_measurement$0733134897$0'),
+reserved([vadc,_,global_result],'adc_measurement$01725849619$0'),
+reserved([cpu,0,nvic,interrupt,_],'adc_measurement$0445362671$0'),
+reserved([p,DIGITAL_IO0sv0,pad,_],'digital_io$01383135420$0'),
+reserved([devicepackage,0,_],'digital_io$36800462$0'),
+uri([devicepackage,0,20],'digital_io$36800462$0'),
+reserved([p,0,pad,14],'cpu_ctrl_xmc1$1638132965$0'),
+reserved([p,0,pad,15],'cpu_ctrl_xmc1$1638132966$0'),
+reserved([cpu,0,exception,hardfault],'cpu_ctrl_xmc1$01591368925$0'),
+reserved([p,DIGITAL_IO1sv0,pad,_],'digital_io$01893669597$1'),
+reserved([devicepackage,0,_],'digital_io$02001255827$1'),
+signal('global_adc$1790945385$0',global_signal,'global_adc$1790945385$0$global_signal'),
+signal('clock_xmc1$01180654739$0',clkout,'clock_xmc1$01180654739$0$clkout'),
+signal('clock_xmc1$031780984$0',frtc,'clock_xmc1$031780984$0$frtc'),
+signal('adc_measurement$0733134899$0',gch,'adc_measurement$0733134899$0$gch'),
+signal('adc_measurement$0733134898$0',gch,'adc_measurement$0733134898$0$gch'),
+signal('adc_measurement$0733134897$0',gch,'adc_measurement$0733134897$0$gch'),
+signal('adc_measurement$01412772712$0',pad,'adc_measurement$01412772712$0$pad'),
+signal('adc_measurement$01412772711$0',pad,'adc_measurement$01412772711$0$pad'),
+signal('adc_measurement$01412772710$0',pad,'adc_measurement$01412772710$0$pad'),
+signal('adc_measurement$554415016$0',pin,'adc_measurement$554415016$0$pin'),
+signal('adc_measurement$554415017$0',pin,'adc_measurement$554415017$0$pin'),
+signal('adc_measurement$554415018$0',pin,'adc_measurement$554415018$0$pin'),
+signal('adc_measurement$0733134899$0',select,'adc_measurement$0733134899$0$select'),
+signal('adc_measurement$0733134898$0',select,'adc_measurement$0733134898$0$select'),
+signal('adc_measurement$0733134897$0',select,'adc_measurement$0733134897$0$select'),
+signal('adc_measurement$01725849619$0',rev0,'adc_measurement$01725849619$0$rev0'),
+signal('adc_measurement$0919802633$0',bgreqtrsel,'adc_measurement$0919802633$0$bgreqtrsel'),
+signal('adc_measurement$0919802633$0',bgreqgtsel,'adc_measurement$0919802633$0$bgreqgtsel'),
+signal('adc_measurement$0919802633$0',global_signal,'adc_measurement$0919802633$0$global_signal'),
+signal('adc_measurement$0445362671$0',signal_in,'adc_measurement$0445362671$0$signal_in'),
+signal('digital_io$01383135420$0',swreg_out,'digital_io$01383135420$0$swreg_out'),
+signal('digital_io$01383135420$0',pad,'digital_io$01383135420$0$pad'),
+signal('digital_io$36800462$0',pin,'digital_io$36800462$0$pin'),
+signal('digital_io$01893669597$1',swreg_out,'digital_io$01893669597$1$swreg_out'),
+signal('digital_io$01893669597$1',pad,'digital_io$01893669597$1$pad'),
+signal('digital_io$02001255827$1',pin,'digital_io$02001255827$1$pin'),
+connected('clock_xmc1$01180654739$0$clkout','clock_xmc1$031780984$0$frtc',1),
+connected('global_adc$1790945385$0$global_signal','adc_measurement$0919802633$0$global_signal',1),
+connected('adc_measurement$01412772712$0$pad','adc_measurement$0733134899$0$gch',1),
+connected('adc_measurement$01412772712$0$pad','adc_measurement$554415016$0$pin',1),
+connected('adc_measurement$01412772711$0$pad','adc_measurement$0733134898$0$gch',1),
+connected('adc_measurement$01412772711$0$pad','adc_measurement$554415017$0$pin',1),
+connected('adc_measurement$01412772710$0$pad','adc_measurement$0733134897$0$gch',1),
+connected('adc_measurement$01412772710$0$pad','adc_measurement$554415018$0$pin',1),
+connected('adc_measurement$01725849619$0$rev0','adc_measurement$0445362671$0$signal_in',1),
+connected('adc_measurement$554415016$0$pin','adc_measurement$01412772712$0$pad',1),
+connected('adc_measurement$554415017$0$pin','adc_measurement$01412772711$0$pad',1),
+connected('adc_measurement$554415018$0$pin','adc_measurement$01412772710$0$pad',1),
+connected('digital_io$36800462$0$pin','digital_io$01383135420$0$pad',1),
+connected('digital_io$01383135420$0$pad','digital_io$36800462$0$pin',1),
+connected('digital_io$02001255827$1$pin','digital_io$01893669597$1$pad',1),
+connected('digital_io$01893669597$1$pad','digital_io$02001255827$1$pin',1),
+uri_element_range(DIGITAL_IO1sv0,[0, 1, 2, 3, 4]),
+register_value('digital_io$01893669597$1',iocr_oe,1),
+uri_element_range(DIGITAL_IO0sv0,[0, 1, 2, 3, 4]),
+register_value('digital_io$01383135420$0',iocr_oe,1)],'digital_io$02001255827$1',Result),15,writeln(timeout),all_solution, Timer, Due, Remainder).
+
+
+
+Jun 26, 2021 6:49:55 AM java.util.logging.LogManager$RootLogger log
+INFO: 
+End of solver : getFeasiblePins() :  Difference in ms 26
+
+
+Jun 26, 2021 6:49:55 AM java.util.logging.LogManager$RootLogger log
+INFO: [/devicepackage/0/7, /devicepackage/0/8, /devicepackage/0/29, /devicepackage/0/27, /devicepackage/0/28, /devicepackage/0/22, /devicepackage/0/21, /devicepackage/0/24, /devicepackage/0/23, /devicepackage/0/14, /devicepackage/0/15, /devicepackage/0/12, /devicepackage/0/13, /devicepackage/0/11, /devicepackage/0/31, /devicepackage/0/30, /devicepackage/0/32, /devicepackage/0/19, /devicepackage/0/35, /devicepackage/0/18, /devicepackage/0/17, /devicepackage/0/36, /devicepackage/0/16]
+
+
+Jun 26, 2021 6:50:00 AM java.util.logging.LogManager$RootLogger log
+INFO: Start of solver :getFeasiblePins() : Sat Jun 26 06:50:00 SGT 2021
+
+
+Jun 26, 2021 6:50:00 AM java.util.logging.LogManager$RootLogger log
+INFO: 
+timeout(ask_feasible_mapping([reserved([vadc,_,global],'global_adc$1790945385$0'),
+reserved([vadc,_,group,0,config],'global_adc$1796505175$0'),
+reserved([vadc,_,group,1,config],'global_adc$1796505176$0'),
+reserved([scu,0,dco,_],'clock_xmc1$01180654739$0'),
+reserved([scu,0,ccu,config],'clock_xmc1$031780984$0'),
+reserved([vadc,_,backgnd],'adc_measurement$0919802633$0'),
+reserved([vadc,_,class,1],'adc_measurement$403379810$0'),
+reserved([vadc,_,class,0],'adc_measurement$1441772177$0'),
+reserved([p,_,pad,_],'adc_measurement$01412772712$0'),
+reserved([p,_,pad,_],'adc_measurement$01412772711$0'),
+reserved([p,_,pad,_],'adc_measurement$01412772710$0'),
+reserved([devicepackage,0,_],'adc_measurement$554415016$0'),
+uri([devicepackage,0,37],'adc_measurement$554415016$0'),
+reserved([devicepackage,0,_],'adc_measurement$554415017$0'),
+uri([devicepackage,0,38],'adc_measurement$554415017$0'),
+reserved([devicepackage,0,_],'adc_measurement$554415018$0'),
+uri([devicepackage,0,1],'adc_measurement$554415018$0'),
+reserved([vadc,0,group,_,ch,_],'adc_measurement$0733134899$0'),
+reserved([vadc,0,group,_,ch,_],'adc_measurement$0733134898$0'),
+reserved([vadc,0,group,_,ch,_],'adc_measurement$0733134897$0'),
+reserved([vadc,_,global_result],'adc_measurement$01725849619$0'),
+reserved([cpu,0,nvic,interrupt,_],'adc_measurement$0445362671$0'),
+reserved([p,DIGITAL_IO0sv0,pad,_],'digital_io$01383135420$0'),
+reserved([devicepackage,0,_],'digital_io$36800462$0'),
+uri([devicepackage,0,20],'digital_io$36800462$0'),
+reserved([p,0,pad,14],'cpu_ctrl_xmc1$1638132965$0'),
+reserved([p,0,pad,15],'cpu_ctrl_xmc1$1638132966$0'),
+reserved([cpu,0,exception,hardfault],'cpu_ctrl_xmc1$01591368925$0'),
+reserved([p,DIGITAL_IO1sv0,pad,_],'digital_io$01893669597$1'),
+reserved([devicepackage,0,_],'digital_io$02001255827$1'),
+signal('global_adc$1790945385$0',global_signal,'global_adc$1790945385$0$global_signal'),
+signal('clock_xmc1$01180654739$0',clkout,'clock_xmc1$01180654739$0$clkout'),
+signal('clock_xmc1$031780984$0',frtc,'clock_xmc1$031780984$0$frtc'),
+signal('adc_measurement$0733134899$0',gch,'adc_measurement$0733134899$0$gch'),
+signal('adc_measurement$0733134898$0',gch,'adc_measurement$0733134898$0$gch'),
+signal('adc_measurement$0733134897$0',gch,'adc_measurement$0733134897$0$gch'),
+signal('adc_measurement$01412772712$0',pad,'adc_measurement$01412772712$0$pad'),
+signal('adc_measurement$01412772711$0',pad,'adc_measurement$01412772711$0$pad'),
+signal('adc_measurement$01412772710$0',pad,'adc_measurement$01412772710$0$pad'),
+signal('adc_measurement$554415016$0',pin,'adc_measurement$554415016$0$pin'),
+signal('adc_measurement$554415017$0',pin,'adc_measurement$554415017$0$pin'),
+signal('adc_measurement$554415018$0',pin,'adc_measurement$554415018$0$pin'),
+signal('adc_measurement$0733134899$0',select,'adc_measurement$0733134899$0$select'),
+signal('adc_measurement$0733134898$0',select,'adc_measurement$0733134898$0$select'),
+signal('adc_measurement$0733134897$0',select,'adc_measurement$0733134897$0$select'),
+signal('adc_measurement$01725849619$0',rev0,'adc_measurement$01725849619$0$rev0'),
+signal('adc_measurement$0919802633$0',bgreqtrsel,'adc_measurement$0919802633$0$bgreqtrsel'),
+signal('adc_measurement$0919802633$0',bgreqgtsel,'adc_measurement$0919802633$0$bgreqgtsel'),
+signal('adc_measurement$0919802633$0',global_signal,'adc_measurement$0919802633$0$global_signal'),
+signal('adc_measurement$0445362671$0',signal_in,'adc_measurement$0445362671$0$signal_in'),
+signal('digital_io$01383135420$0',swreg_out,'digital_io$01383135420$0$swreg_out'),
+signal('digital_io$01383135420$0',pad,'digital_io$01383135420$0$pad'),
+signal('digital_io$36800462$0',pin,'digital_io$36800462$0$pin'),
+signal('digital_io$01893669597$1',swreg_out,'digital_io$01893669597$1$swreg_out'),
+signal('digital_io$01893669597$1',pad,'digital_io$01893669597$1$pad'),
+signal('digital_io$02001255827$1',pin,'digital_io$02001255827$1$pin'),
+connected('clock_xmc1$01180654739$0$clkout','clock_xmc1$031780984$0$frtc',1),
+connected('global_adc$1790945385$0$global_signal','adc_measurement$0919802633$0$global_signal',1),
+connected('adc_measurement$01412772712$0$pad','adc_measurement$0733134899$0$gch',1),
+connected('adc_measurement$01412772712$0$pad','adc_measurement$554415016$0$pin',1),
+connected('adc_measurement$01412772711$0$pad','adc_measurement$0733134898$0$gch',1),
+connected('adc_measurement$01412772711$0$pad','adc_measurement$554415017$0$pin',1),
+connected('adc_measurement$01412772710$0$pad','adc_measurement$0733134897$0$gch',1),
+connected('adc_measurement$01412772710$0$pad','adc_measurement$554415018$0$pin',1),
+connected('adc_measurement$01725849619$0$rev0','adc_measurement$0445362671$0$signal_in',1),
+connected('adc_measurement$554415016$0$pin','adc_measurement$01412772712$0$pad',1),
+connected('adc_measurement$554415017$0$pin','adc_measurement$01412772711$0$pad',1),
+connected('adc_measurement$554415018$0$pin','adc_measurement$01412772710$0$pad',1),
+connected('digital_io$36800462$0$pin','digital_io$01383135420$0$pad',1),
+connected('digital_io$01383135420$0$pad','digital_io$36800462$0$pin',1),
+connected('digital_io$02001255827$1$pin','digital_io$01893669597$1$pad',1),
+connected('digital_io$01893669597$1$pad','digital_io$02001255827$1$pin',1),
+uri_element_range(DIGITAL_IO1sv0,[0, 1, 2, 3, 4]),
+register_value('digital_io$01893669597$1',iocr_oe,1),
+uri_element_range(DIGITAL_IO0sv0,[0, 1, 2, 3, 4]),
+register_value('digital_io$01383135420$0',iocr_oe,1)],'digital_io$02001255827$1',Result),15,writeln(timeout),all_solution, Timer, Due, Remainder).
+
+
+
+Jun 26, 2021 6:50:00 AM java.util.logging.LogManager$RootLogger log
+INFO: 
+End of solver : getFeasiblePins() :  Difference in ms 34
+
+
+Jun 26, 2021 6:50:00 AM java.util.logging.LogManager$RootLogger log
+INFO: [/devicepackage/0/7, /devicepackage/0/8, /devicepackage/0/29, /devicepackage/0/27, /devicepackage/0/28, /devicepackage/0/22, /devicepackage/0/21, /devicepackage/0/24, /devicepackage/0/23, /devicepackage/0/14, /devicepackage/0/15, /devicepackage/0/12, /devicepackage/0/13, /devicepackage/0/11, /devicepackage/0/31, /devicepackage/0/30, /devicepackage/0/32, /devicepackage/0/19, /devicepackage/0/35, /devicepackage/0/18, /devicepackage/0/17, /devicepackage/0/36, /devicepackage/0/16]
+
+
+Jun 26, 2021 6:50:01 AM java.util.logging.LogManager$RootLogger log
+INFO: Start of solver :getFeasiblePins() : Sat Jun 26 06:50:01 SGT 2021
+
+
+Jun 26, 2021 6:50:01 AM java.util.logging.LogManager$RootLogger log
+INFO: 
+timeout(ask_feasible_mapping([reserved([vadc,_,global],'global_adc$1790945385$0'),
+reserved([vadc,_,group,0,config],'global_adc$1796505175$0'),
+reserved([vadc,_,group,1,config],'global_adc$1796505176$0'),
+reserved([scu,0,dco,_],'clock_xmc1$01180654739$0'),
+reserved([scu,0,ccu,config],'clock_xmc1$031780984$0'),
+reserved([vadc,_,backgnd],'adc_measurement$0919802633$0'),
+reserved([vadc,_,class,1],'adc_measurement$403379810$0'),
+reserved([vadc,_,class,0],'adc_measurement$1441772177$0'),
+reserved([p,_,pad,_],'adc_measurement$01412772712$0'),
+reserved([p,_,pad,_],'adc_measurement$01412772711$0'),
+reserved([p,_,pad,_],'adc_measurement$01412772710$0'),
+reserved([devicepackage,0,_],'adc_measurement$554415016$0'),
+uri([devicepackage,0,37],'adc_measurement$554415016$0'),
+reserved([devicepackage,0,_],'adc_measurement$554415017$0'),
+uri([devicepackage,0,38],'adc_measurement$554415017$0'),
+reserved([devicepackage,0,_],'adc_measurement$554415018$0'),
+uri([devicepackage,0,1],'adc_measurement$554415018$0'),
+reserved([vadc,0,group,_,ch,_],'adc_measurement$0733134899$0'),
+reserved([vadc,0,group,_,ch,_],'adc_measurement$0733134898$0'),
+reserved([vadc,0,group,_,ch,_],'adc_measurement$0733134897$0'),
+reserved([vadc,_,global_result],'adc_measurement$01725849619$0'),
+reserved([cpu,0,nvic,interrupt,_],'adc_measurement$0445362671$0'),
+reserved([p,DIGITAL_IO0sv0,pad,_],'digital_io$01383135420$0'),
+reserved([devicepackage,0,_],'digital_io$36800462$0'),
+reserved([p,0,pad,14],'cpu_ctrl_xmc1$1638132965$0'),
+reserved([p,0,pad,15],'cpu_ctrl_xmc1$1638132966$0'),
+reserved([cpu,0,exception,hardfault],'cpu_ctrl_xmc1$01591368925$0'),
+reserved([p,DIGITAL_IO1sv0,pad,_],'digital_io$01893669597$1'),
+reserved([devicepackage,0,_],'digital_io$02001255827$1'),
+uri([devicepackage,0,21],'digital_io$02001255827$1'),
+signal('global_adc$1790945385$0',global_signal,'global_adc$1790945385$0$global_signal'),
+signal('clock_xmc1$01180654739$0',clkout,'clock_xmc1$01180654739$0$clkout'),
+signal('clock_xmc1$031780984$0',frtc,'clock_xmc1$031780984$0$frtc'),
+signal('adc_measurement$0733134899$0',gch,'adc_measurement$0733134899$0$gch'),
+signal('adc_measurement$0733134898$0',gch,'adc_measurement$0733134898$0$gch'),
+signal('adc_measurement$0733134897$0',gch,'adc_measurement$0733134897$0$gch'),
+signal('adc_measurement$01412772712$0',pad,'adc_measurement$01412772712$0$pad'),
+signal('adc_measurement$01412772711$0',pad,'adc_measurement$01412772711$0$pad'),
+signal('adc_measurement$01412772710$0',pad,'adc_measurement$01412772710$0$pad'),
+signal('adc_measurement$554415016$0',pin,'adc_measurement$554415016$0$pin'),
+signal('adc_measurement$554415017$0',pin,'adc_measurement$554415017$0$pin'),
+signal('adc_measurement$554415018$0',pin,'adc_measurement$554415018$0$pin'),
+signal('adc_measurement$0733134899$0',select,'adc_measurement$0733134899$0$select'),
+signal('adc_measurement$0733134898$0',select,'adc_measurement$0733134898$0$select'),
+signal('adc_measurement$0733134897$0',select,'adc_measurement$0733134897$0$select'),
+signal('adc_measurement$01725849619$0',rev0,'adc_measurement$01725849619$0$rev0'),
+signal('adc_measurement$0919802633$0',bgreqtrsel,'adc_measurement$0919802633$0$bgreqtrsel'),
+signal('adc_measurement$0919802633$0',bgreqgtsel,'adc_measurement$0919802633$0$bgreqgtsel'),
+signal('adc_measurement$0919802633$0',global_signal,'adc_measurement$0919802633$0$global_signal'),
+signal('adc_measurement$0445362671$0',signal_in,'adc_measurement$0445362671$0$signal_in'),
+signal('digital_io$01383135420$0',swreg_out,'digital_io$01383135420$0$swreg_out'),
+signal('digital_io$01383135420$0',pad,'digital_io$01383135420$0$pad'),
+signal('digital_io$36800462$0',pin,'digital_io$36800462$0$pin'),
+signal('digital_io$01893669597$1',swreg_out,'digital_io$01893669597$1$swreg_out'),
+signal('digital_io$01893669597$1',pad,'digital_io$01893669597$1$pad'),
+signal('digital_io$02001255827$1',pin,'digital_io$02001255827$1$pin'),
+connected('clock_xmc1$01180654739$0$clkout','clock_xmc1$031780984$0$frtc',1),
+connected('global_adc$1790945385$0$global_signal','adc_measurement$0919802633$0$global_signal',1),
+connected('adc_measurement$01412772712$0$pad','adc_measurement$0733134899$0$gch',1),
+connected('adc_measurement$01412772712$0$pad','adc_measurement$554415016$0$pin',1),
+connected('adc_measurement$01412772711$0$pad','adc_measurement$0733134898$0$gch',1),
+connected('adc_measurement$01412772711$0$pad','adc_measurement$554415017$0$pin',1),
+connected('adc_measurement$01412772710$0$pad','adc_measurement$0733134897$0$gch',1),
+connected('adc_measurement$01412772710$0$pad','adc_measurement$554415018$0$pin',1),
+connected('adc_measurement$01725849619$0$rev0','adc_measurement$0445362671$0$signal_in',1),
+connected('adc_measurement$554415016$0$pin','adc_measurement$01412772712$0$pad',1),
+connected('adc_measurement$554415017$0$pin','adc_measurement$01412772711$0$pad',1),
+connected('adc_measurement$554415018$0$pin','adc_measurement$01412772710$0$pad',1),
+connected('digital_io$36800462$0$pin','digital_io$01383135420$0$pad',1),
+connected('digital_io$01383135420$0$pad','digital_io$36800462$0$pin',1),
+connected('digital_io$02001255827$1$pin','digital_io$01893669597$1$pad',1),
+connected('digital_io$01893669597$1$pad','digital_io$02001255827$1$pin',1),
+uri_element_range(DIGITAL_IO1sv0,[0, 1, 2, 3, 4]),
+register_value('digital_io$01893669597$1',iocr_oe,1),
+uri_element_range(DIGITAL_IO0sv0,[0, 1, 2, 3, 4]),
+register_value('digital_io$01383135420$0',iocr_oe,1)],'digital_io$36800462$0',Result),15,writeln(timeout),all_solution, Timer, Due, Remainder).
+
+
+
+Jun 26, 2021 6:50:01 AM java.util.logging.LogManager$RootLogger log
+INFO: 
+End of solver : getFeasiblePins() :  Difference in ms 77
+
+
+Jun 26, 2021 6:50:01 AM java.util.logging.LogManager$RootLogger log
+INFO: [/devicepackage/0/7, /devicepackage/0/8, /devicepackage/0/29, /devicepackage/0/27, /devicepackage/0/28, /devicepackage/0/22, /devicepackage/0/20, /devicepackage/0/24, /devicepackage/0/23, /devicepackage/0/14, /devicepackage/0/15, /devicepackage/0/12, /devicepackage/0/13, /devicepackage/0/11, /devicepackage/0/31, /devicepackage/0/30, /devicepackage/0/32, /devicepackage/0/19, /devicepackage/0/35, /devicepackage/0/18, /devicepackage/0/17, /devicepackage/0/36, /devicepackage/0/16]
+
+
+Jun 26, 2021 6:50:07 AM java.util.logging.LogManager$RootLogger log
+INFO: Start of solver :getFeasiblePins() : Sat Jun 26 06:50:07 SGT 2021
+
+
+Jun 26, 2021 6:50:07 AM java.util.logging.LogManager$RootLogger log
+INFO: 
+timeout(ask_feasible_mapping([reserved([vadc,_,global],'global_adc$1790945385$0'),
+reserved([vadc,_,group,0,config],'global_adc$1796505175$0'),
+reserved([vadc,_,group,1,config],'global_adc$1796505176$0'),
+reserved([scu,0,dco,_],'clock_xmc1$01180654739$0'),
+reserved([scu,0,ccu,config],'clock_xmc1$031780984$0'),
+reserved([vadc,_,backgnd],'adc_measurement$0919802633$0'),
+reserved([vadc,_,class,1],'adc_measurement$403379810$0'),
+reserved([vadc,_,class,0],'adc_measurement$1441772177$0'),
+reserved([p,_,pad,_],'adc_measurement$01412772712$0'),
+reserved([p,_,pad,_],'adc_measurement$01412772711$0'),
+reserved([p,_,pad,_],'adc_measurement$01412772710$0'),
+reserved([devicepackage,0,_],'adc_measurement$554415016$0'),
+uri([devicepackage,0,37],'adc_measurement$554415016$0'),
+reserved([devicepackage,0,_],'adc_measurement$554415017$0'),
+uri([devicepackage,0,38],'adc_measurement$554415017$0'),
+reserved([devicepackage,0,_],'adc_measurement$554415018$0'),
+uri([devicepackage,0,1],'adc_measurement$554415018$0'),
+reserved([vadc,0,group,_,ch,_],'adc_measurement$0733134899$0'),
+reserved([vadc,0,group,_,ch,_],'adc_measurement$0733134898$0'),
+reserved([vadc,0,group,_,ch,_],'adc_measurement$0733134897$0'),
+reserved([vadc,_,global_result],'adc_measurement$01725849619$0'),
+reserved([cpu,0,nvic,interrupt,_],'adc_measurement$0445362671$0'),
+reserved([p,DIGITAL_IO0sv0,pad,_],'digital_io$01383135420$0'),
+reserved([devicepackage,0,_],'digital_io$36800462$0'),
+reserved([p,0,pad,14],'cpu_ctrl_xmc1$1638132965$0'),
+reserved([p,0,pad,15],'cpu_ctrl_xmc1$1638132966$0'),
+reserved([cpu,0,exception,hardfault],'cpu_ctrl_xmc1$01591368925$0'),
+reserved([p,DIGITAL_IO1sv0,pad,_],'digital_io$01893669597$1'),
+reserved([devicepackage,0,_],'digital_io$02001255827$1'),
+uri([devicepackage,0,21],'digital_io$02001255827$1'),
+signal('global_adc$1790945385$0',global_signal,'global_adc$1790945385$0$global_signal'),
+signal('clock_xmc1$01180654739$0',clkout,'clock_xmc1$01180654739$0$clkout'),
+signal('clock_xmc1$031780984$0',frtc,'clock_xmc1$031780984$0$frtc'),
+signal('adc_measurement$0733134899$0',gch,'adc_measurement$0733134899$0$gch'),
+signal('adc_measurement$0733134898$0',gch,'adc_measurement$0733134898$0$gch'),
+signal('adc_measurement$0733134897$0',gch,'adc_measurement$0733134897$0$gch'),
+signal('adc_measurement$01412772712$0',pad,'adc_measurement$01412772712$0$pad'),
+signal('adc_measurement$01412772711$0',pad,'adc_measurement$01412772711$0$pad'),
+signal('adc_measurement$01412772710$0',pad,'adc_measurement$01412772710$0$pad'),
+signal('adc_measurement$554415016$0',pin,'adc_measurement$554415016$0$pin'),
+signal('adc_measurement$554415017$0',pin,'adc_measurement$554415017$0$pin'),
+signal('adc_measurement$554415018$0',pin,'adc_measurement$554415018$0$pin'),
+signal('adc_measurement$0733134899$0',select,'adc_measurement$0733134899$0$select'),
+signal('adc_measurement$0733134898$0',select,'adc_measurement$0733134898$0$select'),
+signal('adc_measurement$0733134897$0',select,'adc_measurement$0733134897$0$select'),
+signal('adc_measurement$01725849619$0',rev0,'adc_measurement$01725849619$0$rev0'),
+signal('adc_measurement$0919802633$0',bgreqtrsel,'adc_measurement$0919802633$0$bgreqtrsel'),
+signal('adc_measurement$0919802633$0',bgreqgtsel,'adc_measurement$0919802633$0$bgreqgtsel'),
+signal('adc_measurement$0919802633$0',global_signal,'adc_measurement$0919802633$0$global_signal'),
+signal('adc_measurement$0445362671$0',signal_in,'adc_measurement$0445362671$0$signal_in'),
+signal('digital_io$01383135420$0',swreg_out,'digital_io$01383135420$0$swreg_out'),
+signal('digital_io$01383135420$0',pad,'digital_io$01383135420$0$pad'),
+signal('digital_io$36800462$0',pin,'digital_io$36800462$0$pin'),
+signal('digital_io$01893669597$1',swreg_out,'digital_io$01893669597$1$swreg_out'),
+signal('digital_io$01893669597$1',pad,'digital_io$01893669597$1$pad'),
+signal('digital_io$02001255827$1',pin,'digital_io$02001255827$1$pin'),
+connected('clock_xmc1$01180654739$0$clkout','clock_xmc1$031780984$0$frtc',1),
+connected('global_adc$1790945385$0$global_signal','adc_measurement$0919802633$0$global_signal',1),
+connected('adc_measurement$01412772712$0$pad','adc_measurement$0733134899$0$gch',1),
+connected('adc_measurement$01412772712$0$pad','adc_measurement$554415016$0$pin',1),
+connected('adc_measurement$01412772711$0$pad','adc_measurement$0733134898$0$gch',1),
+connected('adc_measurement$01412772711$0$pad','adc_measurement$554415017$0$pin',1),
+connected('adc_measurement$01412772710$0$pad','adc_measurement$0733134897$0$gch',1),
+connected('adc_measurement$01412772710$0$pad','adc_measurement$554415018$0$pin',1),
+connected('adc_measurement$01725849619$0$rev0','adc_measurement$0445362671$0$signal_in',1),
+connected('adc_measurement$554415016$0$pin','adc_measurement$01412772712$0$pad',1),
+connected('adc_measurement$554415017$0$pin','adc_measurement$01412772711$0$pad',1),
+connected('adc_measurement$554415018$0$pin','adc_measurement$01412772710$0$pad',1),
+connected('digital_io$36800462$0$pin','digital_io$01383135420$0$pad',1),
+connected('digital_io$01383135420$0$pad','digital_io$36800462$0$pin',1),
+connected('digital_io$02001255827$1$pin','digital_io$01893669597$1$pad',1),
+connected('digital_io$01893669597$1$pad','digital_io$02001255827$1$pin',1),
+uri_element_range(DIGITAL_IO1sv0,[0, 1, 2, 3, 4]),
+register_value('digital_io$01893669597$1',iocr_oe,1),
+uri_element_range(DIGITAL_IO0sv0,[0, 1, 2, 3, 4]),
+register_value('digital_io$01383135420$0',iocr_oe,1)],'digital_io$36800462$0',Result),15,writeln(timeout),all_solution, Timer, Due, Remainder).
+
+
+
+Jun 26, 2021 6:50:07 AM java.util.logging.LogManager$RootLogger log
+INFO: 
+End of solver : getFeasiblePins() :  Difference in ms 28
+
+
+Jun 26, 2021 6:50:07 AM java.util.logging.LogManager$RootLogger log
+INFO: [/devicepackage/0/7, /devicepackage/0/8, /devicepackage/0/29, /devicepackage/0/27, /devicepackage/0/28, /devicepackage/0/22, /devicepackage/0/20, /devicepackage/0/24, /devicepackage/0/23, /devicepackage/0/14, /devicepackage/0/15, /devicepackage/0/12, /devicepackage/0/13, /devicepackage/0/11, /devicepackage/0/31, /devicepackage/0/30, /devicepackage/0/32, /devicepackage/0/19, /devicepackage/0/35, /devicepackage/0/18, /devicepackage/0/17, /devicepackage/0/36, /devicepackage/0/16]
+
+
+Jun 26, 2021 7:05:50 AM java.util.logging.LogManager$RootLogger log
+INFO: Start of solver :getFeasiblePins() : Sat Jun 26 07:05:50 SGT 2021
+
+
+Jun 26, 2021 7:05:50 AM java.util.logging.LogManager$RootLogger log
+INFO: 
+timeout(ask_feasible_mapping([reserved([vadc,_,global],'global_adc$1790945385$0'),
+reserved([vadc,_,group,0,config],'global_adc$1796505175$0'),
+reserved([vadc,_,group,1,config],'global_adc$1796505176$0'),
+reserved([scu,0,dco,_],'clock_xmc1$01180654739$0'),
+reserved([scu,0,ccu,config],'clock_xmc1$031780984$0'),
+reserved([vadc,_,backgnd],'adc_measurement$0919802633$0'),
+reserved([vadc,_,class,1],'adc_measurement$403379810$0'),
+reserved([vadc,_,class,0],'adc_measurement$1441772177$0'),
+reserved([p,_,pad,_],'adc_measurement$01412772712$0'),
+reserved([p,_,pad,_],'adc_measurement$01412772711$0'),
+reserved([p,_,pad,_],'adc_measurement$01412772710$0'),
+reserved([devicepackage,0,_],'adc_measurement$554415016$0'),
+uri([devicepackage,0,37],'adc_measurement$554415016$0'),
+reserved([devicepackage,0,_],'adc_measurement$554415017$0'),
+uri([devicepackage,0,38],'adc_measurement$554415017$0'),
+reserved([devicepackage,0,_],'adc_measurement$554415018$0'),
+uri([devicepackage,0,1],'adc_measurement$554415018$0'),
+reserved([vadc,0,group,_,ch,_],'adc_measurement$0733134899$0'),
+reserved([vadc,0,group,_,ch,_],'adc_measurement$0733134898$0'),
+reserved([vadc,0,group,_,ch,_],'adc_measurement$0733134897$0'),
+reserved([vadc,_,global_result],'adc_measurement$01725849619$0'),
+reserved([cpu,0,nvic,interrupt,_],'adc_measurement$0445362671$0'),
+reserved([p,DIGITAL_IO0sv0,pad,_],'digital_io$01383135420$0'),
+reserved([devicepackage,0,_],'digital_io$36800462$0'),
+reserved([p,0,pad,14],'cpu_ctrl_xmc1$1638132965$0'),
+reserved([p,0,pad,15],'cpu_ctrl_xmc1$1638132966$0'),
+reserved([cpu,0,exception,hardfault],'cpu_ctrl_xmc1$01591368925$0'),
+reserved([p,DIGITAL_IO1sv0,pad,_],'digital_io$01893669597$1'),
+reserved([devicepackage,0,_],'digital_io$02001255827$1'),
+uri([devicepackage,0,21],'digital_io$02001255827$1'),
+signal('global_adc$1790945385$0',global_signal,'global_adc$1790945385$0$global_signal'),
+signal('clock_xmc1$01180654739$0',clkout,'clock_xmc1$01180654739$0$clkout'),
+signal('clock_xmc1$031780984$0',frtc,'clock_xmc1$031780984$0$frtc'),
+signal('adc_measurement$0733134899$0',gch,'adc_measurement$0733134899$0$gch'),
+signal('adc_measurement$0733134898$0',gch,'adc_measurement$0733134898$0$gch'),
+signal('adc_measurement$0733134897$0',gch,'adc_measurement$0733134897$0$gch'),
+signal('adc_measurement$01412772712$0',pad,'adc_measurement$01412772712$0$pad'),
+signal('adc_measurement$01412772711$0',pad,'adc_measurement$01412772711$0$pad'),
+signal('adc_measurement$01412772710$0',pad,'adc_measurement$01412772710$0$pad'),
+signal('adc_measurement$554415016$0',pin,'adc_measurement$554415016$0$pin'),
+signal('adc_measurement$554415017$0',pin,'adc_measurement$554415017$0$pin'),
+signal('adc_measurement$554415018$0',pin,'adc_measurement$554415018$0$pin'),
+signal('adc_measurement$0733134899$0',select,'adc_measurement$0733134899$0$select'),
+signal('adc_measurement$0733134898$0',select,'adc_measurement$0733134898$0$select'),
+signal('adc_measurement$0733134897$0',select,'adc_measurement$0733134897$0$select'),
+signal('adc_measurement$01725849619$0',rev0,'adc_measurement$01725849619$0$rev0'),
+signal('adc_measurement$0919802633$0',bgreqtrsel,'adc_measurement$0919802633$0$bgreqtrsel'),
+signal('adc_measurement$0919802633$0',bgreqgtsel,'adc_measurement$0919802633$0$bgreqgtsel'),
+signal('adc_measurement$0919802633$0',global_signal,'adc_measurement$0919802633$0$global_signal'),
+signal('adc_measurement$0445362671$0',signal_in,'adc_measurement$0445362671$0$signal_in'),
+signal('digital_io$01383135420$0',swreg_out,'digital_io$01383135420$0$swreg_out'),
+signal('digital_io$01383135420$0',pad,'digital_io$01383135420$0$pad'),
+signal('digital_io$36800462$0',pin,'digital_io$36800462$0$pin'),
+signal('digital_io$01893669597$1',swreg_out,'digital_io$01893669597$1$swreg_out'),
+signal('digital_io$01893669597$1',pad,'digital_io$01893669597$1$pad'),
+signal('digital_io$02001255827$1',pin,'digital_io$02001255827$1$pin'),
+connected('clock_xmc1$01180654739$0$clkout','clock_xmc1$031780984$0$frtc',1),
+connected('global_adc$1790945385$0$global_signal','adc_measurement$0919802633$0$global_signal',1),
+connected('adc_measurement$01412772712$0$pad','adc_measurement$0733134899$0$gch',1),
+connected('adc_measurement$01412772712$0$pad','adc_measurement$554415016$0$pin',1),
+connected('adc_measurement$01412772711$0$pad','adc_measurement$0733134898$0$gch',1),
+connected('adc_measurement$01412772711$0$pad','adc_measurement$554415017$0$pin',1),
+connected('adc_measurement$01412772710$0$pad','adc_measurement$0733134897$0$gch',1),
+connected('adc_measurement$01412772710$0$pad','adc_measurement$554415018$0$pin',1),
+connected('adc_measurement$01725849619$0$rev0','adc_measurement$0445362671$0$signal_in',1),
+connected('adc_measurement$554415016$0$pin','adc_measurement$01412772712$0$pad',1),
+connected('adc_measurement$554415017$0$pin','adc_measurement$01412772711$0$pad',1),
+connected('adc_measurement$554415018$0$pin','adc_measurement$01412772710$0$pad',1),
+connected('digital_io$36800462$0$pin','digital_io$01383135420$0$pad',1),
+connected('digital_io$01383135420$0$pad','digital_io$36800462$0$pin',1),
+connected('digital_io$02001255827$1$pin','digital_io$01893669597$1$pad',1),
+connected('digital_io$01893669597$1$pad','digital_io$02001255827$1$pin',1),
+uri_element_range(DIGITAL_IO1sv0,[0, 1, 2, 3, 4]),
+register_value('digital_io$01893669597$1',iocr_oe,1),
+uri_element_range(DIGITAL_IO0sv0,[0, 1, 2, 3, 4]),
+register_value('digital_io$01383135420$0',iocr_oe,1)],'digital_io$36800462$0',Result),15,writeln(timeout),all_solution, Timer, Due, Remainder).
+
+
+
+Jun 26, 2021 7:05:50 AM java.util.logging.LogManager$RootLogger log
+INFO: 
+End of solver : getFeasiblePins() :  Difference in ms 27
+
+
+Jun 26, 2021 7:05:50 AM java.util.logging.LogManager$RootLogger log
+INFO: [/devicepackage/0/7, /devicepackage/0/8, /devicepackage/0/29, /devicepackage/0/27, /devicepackage/0/28, /devicepackage/0/22, /devicepackage/0/20, /devicepackage/0/24, /devicepackage/0/23, /devicepackage/0/14, /devicepackage/0/15, /devicepackage/0/12, /devicepackage/0/13, /devicepackage/0/11, /devicepackage/0/31, /devicepackage/0/30, /devicepackage/0/32, /devicepackage/0/19, /devicepackage/0/35, /devicepackage/0/18, /devicepackage/0/17, /devicepackage/0/36, /devicepackage/0/16]
+
+
+Jun 26, 2021 7:05:50 AM java.util.logging.LogManager$RootLogger log
+INFO: Start of solver :getFeasiblePins() : Sat Jun 26 07:05:50 SGT 2021
+
+
+Jun 26, 2021 7:05:50 AM java.util.logging.LogManager$RootLogger log
+INFO: 
+timeout(ask_feasible_mapping([reserved([vadc,_,global],'global_adc$1790945385$0'),
+reserved([vadc,_,group,0,config],'global_adc$1796505175$0'),
+reserved([vadc,_,group,1,config],'global_adc$1796505176$0'),
+reserved([scu,0,dco,_],'clock_xmc1$01180654739$0'),
+reserved([scu,0,ccu,config],'clock_xmc1$031780984$0'),
+reserved([vadc,_,backgnd],'adc_measurement$0919802633$0'),
+reserved([vadc,_,class,1],'adc_measurement$403379810$0'),
+reserved([vadc,_,class,0],'adc_measurement$1441772177$0'),
+reserved([p,_,pad,_],'adc_measurement$01412772712$0'),
+reserved([p,_,pad,_],'adc_measurement$01412772711$0'),
+reserved([p,_,pad,_],'adc_measurement$01412772710$0'),
+reserved([devicepackage,0,_],'adc_measurement$554415016$0'),
+uri([devicepackage,0,37],'adc_measurement$554415016$0'),
+reserved([devicepackage,0,_],'adc_measurement$554415017$0'),
+uri([devicepackage,0,38],'adc_measurement$554415017$0'),
+reserved([devicepackage,0,_],'adc_measurement$554415018$0'),
+uri([devicepackage,0,1],'adc_measurement$554415018$0'),
+reserved([vadc,0,group,_,ch,_],'adc_measurement$0733134899$0'),
+reserved([vadc,0,group,_,ch,_],'adc_measurement$0733134898$0'),
+reserved([vadc,0,group,_,ch,_],'adc_measurement$0733134897$0'),
+reserved([vadc,_,global_result],'adc_measurement$01725849619$0'),
+reserved([cpu,0,nvic,interrupt,_],'adc_measurement$0445362671$0'),
+reserved([p,DIGITAL_IO0sv0,pad,_],'digital_io$01383135420$0'),
+reserved([devicepackage,0,_],'digital_io$36800462$0'),
+reserved([p,0,pad,14],'cpu_ctrl_xmc1$1638132965$0'),
+reserved([p,0,pad,15],'cpu_ctrl_xmc1$1638132966$0'),
+reserved([cpu,0,exception,hardfault],'cpu_ctrl_xmc1$01591368925$0'),
+reserved([p,DIGITAL_IO1sv0,pad,_],'digital_io$01893669597$1'),
+reserved([devicepackage,0,_],'digital_io$02001255827$1'),
+uri([devicepackage,0,21],'digital_io$02001255827$1'),
+signal('global_adc$1790945385$0',global_signal,'global_adc$1790945385$0$global_signal'),
+signal('clock_xmc1$01180654739$0',clkout,'clock_xmc1$01180654739$0$clkout'),
+signal('clock_xmc1$031780984$0',frtc,'clock_xmc1$031780984$0$frtc'),
+signal('adc_measurement$0733134899$0',gch,'adc_measurement$0733134899$0$gch'),
+signal('adc_measurement$0733134898$0',gch,'adc_measurement$0733134898$0$gch'),
+signal('adc_measurement$0733134897$0',gch,'adc_measurement$0733134897$0$gch'),
+signal('adc_measurement$01412772712$0',pad,'adc_measurement$01412772712$0$pad'),
+signal('adc_measurement$01412772711$0',pad,'adc_measurement$01412772711$0$pad'),
+signal('adc_measurement$01412772710$0',pad,'adc_measurement$01412772710$0$pad'),
+signal('adc_measurement$554415016$0',pin,'adc_measurement$554415016$0$pin'),
+signal('adc_measurement$554415017$0',pin,'adc_measurement$554415017$0$pin'),
+signal('adc_measurement$554415018$0',pin,'adc_measurement$554415018$0$pin'),
+signal('adc_measurement$0733134899$0',select,'adc_measurement$0733134899$0$select'),
+signal('adc_measurement$0733134898$0',select,'adc_measurement$0733134898$0$select'),
+signal('adc_measurement$0733134897$0',select,'adc_measurement$0733134897$0$select'),
+signal('adc_measurement$01725849619$0',rev0,'adc_measurement$01725849619$0$rev0'),
+signal('adc_measurement$0919802633$0',bgreqtrsel,'adc_measurement$0919802633$0$bgreqtrsel'),
+signal('adc_measurement$0919802633$0',bgreqgtsel,'adc_measurement$0919802633$0$bgreqgtsel'),
+signal('adc_measurement$0919802633$0',global_signal,'adc_measurement$0919802633$0$global_signal'),
+signal('adc_measurement$0445362671$0',signal_in,'adc_measurement$0445362671$0$signal_in'),
+signal('digital_io$01383135420$0',swreg_out,'digital_io$01383135420$0$swreg_out'),
+signal('digital_io$01383135420$0',pad,'digital_io$01383135420$0$pad'),
+signal('digital_io$36800462$0',pin,'digital_io$36800462$0$pin'),
+signal('digital_io$01893669597$1',swreg_out,'digital_io$01893669597$1$swreg_out'),
+signal('digital_io$01893669597$1',pad,'digital_io$01893669597$1$pad'),
+signal('digital_io$02001255827$1',pin,'digital_io$02001255827$1$pin'),
+connected('clock_xmc1$01180654739$0$clkout','clock_xmc1$031780984$0$frtc',1),
+connected('global_adc$1790945385$0$global_signal','adc_measurement$0919802633$0$global_signal',1),
+connected('adc_measurement$01412772712$0$pad','adc_measurement$0733134899$0$gch',1),
+connected('adc_measurement$01412772712$0$pad','adc_measurement$554415016$0$pin',1),
+connected('adc_measurement$01412772711$0$pad','adc_measurement$0733134898$0$gch',1),
+connected('adc_measurement$01412772711$0$pad','adc_measurement$554415017$0$pin',1),
+connected('adc_measurement$01412772710$0$pad','adc_measurement$0733134897$0$gch',1),
+connected('adc_measurement$01412772710$0$pad','adc_measurement$554415018$0$pin',1),
+connected('adc_measurement$01725849619$0$rev0','adc_measurement$0445362671$0$signal_in',1),
+connected('adc_measurement$554415016$0$pin','adc_measurement$01412772712$0$pad',1),
+connected('adc_measurement$554415017$0$pin','adc_measurement$01412772711$0$pad',1),
+connected('adc_measurement$554415018$0$pin','adc_measurement$01412772710$0$pad',1),
+connected('digital_io$36800462$0$pin','digital_io$01383135420$0$pad',1),
+connected('digital_io$01383135420$0$pad','digital_io$36800462$0$pin',1),
+connected('digital_io$02001255827$1$pin','digital_io$01893669597$1$pad',1),
+connected('digital_io$01893669597$1$pad','digital_io$02001255827$1$pin',1),
+uri_element_range(DIGITAL_IO1sv0,[0, 1, 2, 3, 4]),
+register_value('digital_io$01893669597$1',iocr_oe,1),
+uri_element_range(DIGITAL_IO0sv0,[0, 1, 2, 3, 4]),
+register_value('digital_io$01383135420$0',iocr_oe,1)],'digital_io$36800462$0',Result),15,writeln(timeout),all_solution, Timer, Due, Remainder).
+
+
+
+Jun 26, 2021 7:05:50 AM java.util.logging.LogManager$RootLogger log
+INFO: 
+End of solver : getFeasiblePins() :  Difference in ms 27
+
+
+Jun 26, 2021 7:05:50 AM java.util.logging.LogManager$RootLogger log
+INFO: [/devicepackage/0/7, /devicepackage/0/8, /devicepackage/0/29, /devicepackage/0/27, /devicepackage/0/28, /devicepackage/0/22, /devicepackage/0/20, /devicepackage/0/24, /devicepackage/0/23, /devicepackage/0/14, /devicepackage/0/15, /devicepackage/0/12, /devicepackage/0/13, /devicepackage/0/11, /devicepackage/0/31, /devicepackage/0/30, /devicepackage/0/32, /devicepackage/0/19, /devicepackage/0/35, /devicepackage/0/18, /devicepackage/0/17, /devicepackage/0/36, /devicepackage/0/16]
+
+
+Jun 26, 2021 7:12:31 AM java.util.logging.LogManager$RootLogger log
+INFO: Start of solver :getFeasiblePins() : Sat Jun 26 07:12:31 SGT 2021
+
+
+Jun 26, 2021 7:12:31 AM java.util.logging.LogManager$RootLogger log
+INFO: 
+timeout(ask_feasible_mapping([reserved([vadc,_,global],'global_adc$1790945385$0'),
+reserved([vadc,_,group,0,config],'global_adc$1796505175$0'),
+reserved([vadc,_,group,1,config],'global_adc$1796505176$0'),
+reserved([scu,0,dco,_],'clock_xmc1$01180654739$0'),
+reserved([scu,0,ccu,config],'clock_xmc1$031780984$0'),
+reserved([vadc,_,backgnd],'adc_measurement$0919802633$0'),
+reserved([vadc,_,class,1],'adc_measurement$403379810$0'),
+reserved([vadc,_,class,0],'adc_measurement$1441772177$0'),
+reserved([p,_,pad,_],'adc_measurement$01412772712$0'),
+reserved([p,_,pad,_],'adc_measurement$01412772711$0'),
+reserved([p,_,pad,_],'adc_measurement$01412772710$0'),
+reserved([devicepackage,0,_],'adc_measurement$554415016$0'),
+uri([devicepackage,0,37],'adc_measurement$554415016$0'),
+reserved([devicepackage,0,_],'adc_measurement$554415017$0'),
+uri([devicepackage,0,38],'adc_measurement$554415017$0'),
+reserved([devicepackage,0,_],'adc_measurement$554415018$0'),
+uri([devicepackage,0,1],'adc_measurement$554415018$0'),
+reserved([vadc,0,group,_,ch,_],'adc_measurement$0733134899$0'),
+reserved([vadc,0,group,_,ch,_],'adc_measurement$0733134898$0'),
+reserved([vadc,0,group,_,ch,_],'adc_measurement$0733134897$0'),
+reserved([vadc,_,global_result],'adc_measurement$01725849619$0'),
+reserved([cpu,0,nvic,interrupt,_],'adc_measurement$0445362671$0'),
+reserved([p,DIGITAL_IO0sv0,pad,_],'digital_io$01383135420$0'),
+reserved([devicepackage,0,_],'digital_io$36800462$0'),
+reserved([p,0,pad,14],'cpu_ctrl_xmc1$1638132965$0'),
+reserved([p,0,pad,15],'cpu_ctrl_xmc1$1638132966$0'),
+reserved([cpu,0,exception,hardfault],'cpu_ctrl_xmc1$01591368925$0'),
+reserved([p,DIGITAL_IO1sv0,pad,_],'digital_io$01893669597$1'),
+reserved([devicepackage,0,_],'digital_io$02001255827$1'),
+uri([devicepackage,0,21],'digital_io$02001255827$1'),
+signal('global_adc$1790945385$0',global_signal,'global_adc$1790945385$0$global_signal'),
+signal('clock_xmc1$01180654739$0',clkout,'clock_xmc1$01180654739$0$clkout'),
+signal('clock_xmc1$031780984$0',frtc,'clock_xmc1$031780984$0$frtc'),
+signal('adc_measurement$0733134899$0',gch,'adc_measurement$0733134899$0$gch'),
+signal('adc_measurement$0733134898$0',gch,'adc_measurement$0733134898$0$gch'),
+signal('adc_measurement$0733134897$0',gch,'adc_measurement$0733134897$0$gch'),
+signal('adc_measurement$01412772712$0',pad,'adc_measurement$01412772712$0$pad'),
+signal('adc_measurement$01412772711$0',pad,'adc_measurement$01412772711$0$pad'),
+signal('adc_measurement$01412772710$0',pad,'adc_measurement$01412772710$0$pad'),
+signal('adc_measurement$554415016$0',pin,'adc_measurement$554415016$0$pin'),
+signal('adc_measurement$554415017$0',pin,'adc_measurement$554415017$0$pin'),
+signal('adc_measurement$554415018$0',pin,'adc_measurement$554415018$0$pin'),
+signal('adc_measurement$0733134899$0',select,'adc_measurement$0733134899$0$select'),
+signal('adc_measurement$0733134898$0',select,'adc_measurement$0733134898$0$select'),
+signal('adc_measurement$0733134897$0',select,'adc_measurement$0733134897$0$select'),
+signal('adc_measurement$01725849619$0',rev0,'adc_measurement$01725849619$0$rev0'),
+signal('adc_measurement$0919802633$0',bgreqtrsel,'adc_measurement$0919802633$0$bgreqtrsel'),
+signal('adc_measurement$0919802633$0',bgreqgtsel,'adc_measurement$0919802633$0$bgreqgtsel'),
+signal('adc_measurement$0919802633$0',global_signal,'adc_measurement$0919802633$0$global_signal'),
+signal('adc_measurement$0445362671$0',signal_in,'adc_measurement$0445362671$0$signal_in'),
+signal('digital_io$01383135420$0',swreg_out,'digital_io$01383135420$0$swreg_out'),
+signal('digital_io$01383135420$0',pad,'digital_io$01383135420$0$pad'),
+signal('digital_io$36800462$0',pin,'digital_io$36800462$0$pin'),
+signal('digital_io$01893669597$1',swreg_out,'digital_io$01893669597$1$swreg_out'),
+signal('digital_io$01893669597$1',pad,'digital_io$01893669597$1$pad'),
+signal('digital_io$02001255827$1',pin,'digital_io$02001255827$1$pin'),
+connected('clock_xmc1$01180654739$0$clkout','clock_xmc1$031780984$0$frtc',1),
+connected('global_adc$1790945385$0$global_signal','adc_measurement$0919802633$0$global_signal',1),
+connected('adc_measurement$01412772712$0$pad','adc_measurement$0733134899$0$gch',1),
+connected('adc_measurement$01412772712$0$pad','adc_measurement$554415016$0$pin',1),
+connected('adc_measurement$01412772711$0$pad','adc_measurement$0733134898$0$gch',1),
+connected('adc_measurement$01412772711$0$pad','adc_measurement$554415017$0$pin',1),
+connected('adc_measurement$01412772710$0$pad','adc_measurement$0733134897$0$gch',1),
+connected('adc_measurement$01412772710$0$pad','adc_measurement$554415018$0$pin',1),
+connected('adc_measurement$01725849619$0$rev0','adc_measurement$0445362671$0$signal_in',1),
+connected('adc_measurement$554415016$0$pin','adc_measurement$01412772712$0$pad',1),
+connected('adc_measurement$554415017$0$pin','adc_measurement$01412772711$0$pad',1),
+connected('adc_measurement$554415018$0$pin','adc_measurement$01412772710$0$pad',1),
+connected('digital_io$36800462$0$pin','digital_io$01383135420$0$pad',1),
+connected('digital_io$01383135420$0$pad','digital_io$36800462$0$pin',1),
+connected('digital_io$02001255827$1$pin','digital_io$01893669597$1$pad',1),
+connected('digital_io$01893669597$1$pad','digital_io$02001255827$1$pin',1),
+uri_element_range(DIGITAL_IO1sv0,[0, 1, 2, 3, 4]),
+register_value('digital_io$01893669597$1',iocr_oe,1),
+uri_element_range(DIGITAL_IO0sv0,[0, 1, 2, 3, 4]),
+register_value('digital_io$01383135420$0',iocr_oe,1)],'digital_io$36800462$0',Result),15,writeln(timeout),all_solution, Timer, Due, Remainder).
+
+
+
+Jun 26, 2021 7:12:31 AM java.util.logging.LogManager$RootLogger log
+INFO: 
+End of solver : getFeasiblePins() :  Difference in ms 24
+
+
+Jun 26, 2021 7:12:31 AM java.util.logging.LogManager$RootLogger log
+INFO: [/devicepackage/0/7, /devicepackage/0/8, /devicepackage/0/29, /devicepackage/0/27, /devicepackage/0/28, /devicepackage/0/22, /devicepackage/0/20, /devicepackage/0/24, /devicepackage/0/23, /devicepackage/0/14, /devicepackage/0/15, /devicepackage/0/12, /devicepackage/0/13, /devicepackage/0/11, /devicepackage/0/31, /devicepackage/0/30, /devicepackage/0/32, /devicepackage/0/19, /devicepackage/0/35, /devicepackage/0/18, /devicepackage/0/17, /devicepackage/0/36, /devicepackage/0/16]
+
+
+Jun 26, 2021 7:12:31 AM java.util.logging.LogManager$RootLogger log
+INFO: Start of solver :getFeasiblePins() : Sat Jun 26 07:12:31 SGT 2021
+
+
+Jun 26, 2021 7:12:31 AM java.util.logging.LogManager$RootLogger log
+INFO: 
+timeout(ask_feasible_mapping([reserved([vadc,_,global],'global_adc$1790945385$0'),
+reserved([vadc,_,group,0,config],'global_adc$1796505175$0'),
+reserved([vadc,_,group,1,config],'global_adc$1796505176$0'),
+reserved([scu,0,dco,_],'clock_xmc1$01180654739$0'),
+reserved([scu,0,ccu,config],'clock_xmc1$031780984$0'),
+reserved([vadc,_,backgnd],'adc_measurement$0919802633$0'),
+reserved([vadc,_,class,1],'adc_measurement$403379810$0'),
+reserved([vadc,_,class,0],'adc_measurement$1441772177$0'),
+reserved([p,_,pad,_],'adc_measurement$01412772712$0'),
+reserved([p,_,pad,_],'adc_measurement$01412772711$0'),
+reserved([p,_,pad,_],'adc_measurement$01412772710$0'),
+reserved([devicepackage,0,_],'adc_measurement$554415016$0'),
+uri([devicepackage,0,37],'adc_measurement$554415016$0'),
+reserved([devicepackage,0,_],'adc_measurement$554415017$0'),
+uri([devicepackage,0,38],'adc_measurement$554415017$0'),
+reserved([devicepackage,0,_],'adc_measurement$554415018$0'),
+uri([devicepackage,0,1],'adc_measurement$554415018$0'),
+reserved([vadc,0,group,_,ch,_],'adc_measurement$0733134899$0'),
+reserved([vadc,0,group,_,ch,_],'adc_measurement$0733134898$0'),
+reserved([vadc,0,group,_,ch,_],'adc_measurement$0733134897$0'),
+reserved([vadc,_,global_result],'adc_measurement$01725849619$0'),
+reserved([cpu,0,nvic,interrupt,_],'adc_measurement$0445362671$0'),
+reserved([p,DIGITAL_IO0sv0,pad,_],'digital_io$01383135420$0'),
+reserved([devicepackage,0,_],'digital_io$36800462$0'),
+reserved([p,0,pad,14],'cpu_ctrl_xmc1$1638132965$0'),
+reserved([p,0,pad,15],'cpu_ctrl_xmc1$1638132966$0'),
+reserved([cpu,0,exception,hardfault],'cpu_ctrl_xmc1$01591368925$0'),
+reserved([p,DIGITAL_IO1sv0,pad,_],'digital_io$01893669597$1'),
+reserved([devicepackage,0,_],'digital_io$02001255827$1'),
+uri([devicepackage,0,21],'digital_io$02001255827$1'),
+signal('global_adc$1790945385$0',global_signal,'global_adc$1790945385$0$global_signal'),
+signal('clock_xmc1$01180654739$0',clkout,'clock_xmc1$01180654739$0$clkout'),
+signal('clock_xmc1$031780984$0',frtc,'clock_xmc1$031780984$0$frtc'),
+signal('adc_measurement$0733134899$0',gch,'adc_measurement$0733134899$0$gch'),
+signal('adc_measurement$0733134898$0',gch,'adc_measurement$0733134898$0$gch'),
+signal('adc_measurement$0733134897$0',gch,'adc_measurement$0733134897$0$gch'),
+signal('adc_measurement$01412772712$0',pad,'adc_measurement$01412772712$0$pad'),
+signal('adc_measurement$01412772711$0',pad,'adc_measurement$01412772711$0$pad'),
+signal('adc_measurement$01412772710$0',pad,'adc_measurement$01412772710$0$pad'),
+signal('adc_measurement$554415016$0',pin,'adc_measurement$554415016$0$pin'),
+signal('adc_measurement$554415017$0',pin,'adc_measurement$554415017$0$pin'),
+signal('adc_measurement$554415018$0',pin,'adc_measurement$554415018$0$pin'),
+signal('adc_measurement$0733134899$0',select,'adc_measurement$0733134899$0$select'),
+signal('adc_measurement$0733134898$0',select,'adc_measurement$0733134898$0$select'),
+signal('adc_measurement$0733134897$0',select,'adc_measurement$0733134897$0$select'),
+signal('adc_measurement$01725849619$0',rev0,'adc_measurement$01725849619$0$rev0'),
+signal('adc_measurement$0919802633$0',bgreqtrsel,'adc_measurement$0919802633$0$bgreqtrsel'),
+signal('adc_measurement$0919802633$0',bgreqgtsel,'adc_measurement$0919802633$0$bgreqgtsel'),
+signal('adc_measurement$0919802633$0',global_signal,'adc_measurement$0919802633$0$global_signal'),
+signal('adc_measurement$0445362671$0',signal_in,'adc_measurement$0445362671$0$signal_in'),
+signal('digital_io$01383135420$0',swreg_out,'digital_io$01383135420$0$swreg_out'),
+signal('digital_io$01383135420$0',pad,'digital_io$01383135420$0$pad'),
+signal('digital_io$36800462$0',pin,'digital_io$36800462$0$pin'),
+signal('digital_io$01893669597$1',swreg_out,'digital_io$01893669597$1$swreg_out'),
+signal('digital_io$01893669597$1',pad,'digital_io$01893669597$1$pad'),
+signal('digital_io$02001255827$1',pin,'digital_io$02001255827$1$pin'),
+connected('clock_xmc1$01180654739$0$clkout','clock_xmc1$031780984$0$frtc',1),
+connected('global_adc$1790945385$0$global_signal','adc_measurement$0919802633$0$global_signal',1),
+connected('adc_measurement$01412772712$0$pad','adc_measurement$0733134899$0$gch',1),
+connected('adc_measurement$01412772712$0$pad','adc_measurement$554415016$0$pin',1),
+connected('adc_measurement$01412772711$0$pad','adc_measurement$0733134898$0$gch',1),
+connected('adc_measurement$01412772711$0$pad','adc_measurement$554415017$0$pin',1),
+connected('adc_measurement$01412772710$0$pad','adc_measurement$0733134897$0$gch',1),
+connected('adc_measurement$01412772710$0$pad','adc_measurement$554415018$0$pin',1),
+connected('adc_measurement$01725849619$0$rev0','adc_measurement$0445362671$0$signal_in',1),
+connected('adc_measurement$554415016$0$pin','adc_measurement$01412772712$0$pad',1),
+connected('adc_measurement$554415017$0$pin','adc_measurement$01412772711$0$pad',1),
+connected('adc_measurement$554415018$0$pin','adc_measurement$01412772710$0$pad',1),
+connected('digital_io$36800462$0$pin','digital_io$01383135420$0$pad',1),
+connected('digital_io$01383135420$0$pad','digital_io$36800462$0$pin',1),
+connected('digital_io$02001255827$1$pin','digital_io$01893669597$1$pad',1),
+connected('digital_io$01893669597$1$pad','digital_io$02001255827$1$pin',1),
+uri_element_range(DIGITAL_IO1sv0,[0, 1, 2, 3, 4]),
+register_value('digital_io$01893669597$1',iocr_oe,1),
+uri_element_range(DIGITAL_IO0sv0,[0, 1, 2, 3, 4]),
+register_value('digital_io$01383135420$0',iocr_oe,1)],'digital_io$36800462$0',Result),15,writeln(timeout),all_solution, Timer, Due, Remainder).
+
+
+
+Jun 26, 2021 7:12:31 AM java.util.logging.LogManager$RootLogger log
+INFO: 
+End of solver : getFeasiblePins() :  Difference in ms 24
+
+
+Jun 26, 2021 7:12:31 AM java.util.logging.LogManager$RootLogger log
+INFO: [/devicepackage/0/7, /devicepackage/0/8, /devicepackage/0/29, /devicepackage/0/27, /devicepackage/0/28, /devicepackage/0/22, /devicepackage/0/20, /devicepackage/0/24, /devicepackage/0/23, /devicepackage/0/14, /devicepackage/0/15, /devicepackage/0/12, /devicepackage/0/13, /devicepackage/0/11, /devicepackage/0/31, /devicepackage/0/30, /devicepackage/0/32, /devicepackage/0/19, /devicepackage/0/35, /devicepackage/0/18, /devicepackage/0/17, /devicepackage/0/36, /devicepackage/0/16]
+
+
+Jun 26, 2021 7:12:39 AM java.util.logging.LogManager$RootLogger log
+INFO: Start of solver :getFeasiblePins() : Sat Jun 26 07:12:39 SGT 2021
+
+
+Jun 26, 2021 7:12:39 AM java.util.logging.LogManager$RootLogger log
+INFO: 
+timeout(ask_feasible_mapping([reserved([vadc,_,global],'global_adc$1790945385$0'),
+reserved([vadc,_,group,0,config],'global_adc$1796505175$0'),
+reserved([vadc,_,group,1,config],'global_adc$1796505176$0'),
+reserved([scu,0,dco,_],'clock_xmc1$01180654739$0'),
+reserved([scu,0,ccu,config],'clock_xmc1$031780984$0'),
+reserved([vadc,_,backgnd],'adc_measurement$0919802633$0'),
+reserved([vadc,_,class,1],'adc_measurement$403379810$0'),
+reserved([vadc,_,class,0],'adc_measurement$1441772177$0'),
+reserved([p,_,pad,_],'adc_measurement$01412772712$0'),
+reserved([p,_,pad,_],'adc_measurement$01412772711$0'),
+reserved([p,_,pad,_],'adc_measurement$01412772710$0'),
+reserved([devicepackage,0,_],'adc_measurement$554415016$0'),
+uri([devicepackage,0,37],'adc_measurement$554415016$0'),
+reserved([devicepackage,0,_],'adc_measurement$554415017$0'),
+uri([devicepackage,0,38],'adc_measurement$554415017$0'),
+reserved([devicepackage,0,_],'adc_measurement$554415018$0'),
+uri([devicepackage,0,1],'adc_measurement$554415018$0'),
+reserved([vadc,0,group,_,ch,_],'adc_measurement$0733134899$0'),
+reserved([vadc,0,group,_,ch,_],'adc_measurement$0733134898$0'),
+reserved([vadc,0,group,_,ch,_],'adc_measurement$0733134897$0'),
+reserved([vadc,_,global_result],'adc_measurement$01725849619$0'),
+reserved([cpu,0,nvic,interrupt,_],'adc_measurement$0445362671$0'),
+reserved([p,DIGITAL_IO0sv0,pad,_],'digital_io$01383135420$0'),
+reserved([devicepackage,0,_],'digital_io$36800462$0'),
+uri([devicepackage,0,20],'digital_io$36800462$0'),
+reserved([p,0,pad,14],'cpu_ctrl_xmc1$1638132965$0'),
+reserved([p,0,pad,15],'cpu_ctrl_xmc1$1638132966$0'),
+reserved([cpu,0,exception,hardfault],'cpu_ctrl_xmc1$01591368925$0'),
+reserved([p,DIGITAL_IO1sv0,pad,_],'digital_io$01893669597$1'),
+reserved([devicepackage,0,_],'digital_io$02001255827$1'),
+signal('global_adc$1790945385$0',global_signal,'global_adc$1790945385$0$global_signal'),
+signal('clock_xmc1$01180654739$0',clkout,'clock_xmc1$01180654739$0$clkout'),
+signal('clock_xmc1$031780984$0',frtc,'clock_xmc1$031780984$0$frtc'),
+signal('adc_measurement$0733134899$0',gch,'adc_measurement$0733134899$0$gch'),
+signal('adc_measurement$0733134898$0',gch,'adc_measurement$0733134898$0$gch'),
+signal('adc_measurement$0733134897$0',gch,'adc_measurement$0733134897$0$gch'),
+signal('adc_measurement$01412772712$0',pad,'adc_measurement$01412772712$0$pad'),
+signal('adc_measurement$01412772711$0',pad,'adc_measurement$01412772711$0$pad'),
+signal('adc_measurement$01412772710$0',pad,'adc_measurement$01412772710$0$pad'),
+signal('adc_measurement$554415016$0',pin,'adc_measurement$554415016$0$pin'),
+signal('adc_measurement$554415017$0',pin,'adc_measurement$554415017$0$pin'),
+signal('adc_measurement$554415018$0',pin,'adc_measurement$554415018$0$pin'),
+signal('adc_measurement$0733134899$0',select,'adc_measurement$0733134899$0$select'),
+signal('adc_measurement$0733134898$0',select,'adc_measurement$0733134898$0$select'),
+signal('adc_measurement$0733134897$0',select,'adc_measurement$0733134897$0$select'),
+signal('adc_measurement$01725849619$0',rev0,'adc_measurement$01725849619$0$rev0'),
+signal('adc_measurement$0919802633$0',bgreqtrsel,'adc_measurement$0919802633$0$bgreqtrsel'),
+signal('adc_measurement$0919802633$0',bgreqgtsel,'adc_measurement$0919802633$0$bgreqgtsel'),
+signal('adc_measurement$0919802633$0',global_signal,'adc_measurement$0919802633$0$global_signal'),
+signal('adc_measurement$0445362671$0',signal_in,'adc_measurement$0445362671$0$signal_in'),
+signal('digital_io$01383135420$0',swreg_out,'digital_io$01383135420$0$swreg_out'),
+signal('digital_io$01383135420$0',pad,'digital_io$01383135420$0$pad'),
+signal('digital_io$36800462$0',pin,'digital_io$36800462$0$pin'),
+signal('digital_io$01893669597$1',swreg_out,'digital_io$01893669597$1$swreg_out'),
+signal('digital_io$01893669597$1',pad,'digital_io$01893669597$1$pad'),
+signal('digital_io$02001255827$1',pin,'digital_io$02001255827$1$pin'),
+connected('clock_xmc1$01180654739$0$clkout','clock_xmc1$031780984$0$frtc',1),
+connected('global_adc$1790945385$0$global_signal','adc_measurement$0919802633$0$global_signal',1),
+connected('adc_measurement$01412772712$0$pad','adc_measurement$0733134899$0$gch',1),
+connected('adc_measurement$01412772712$0$pad','adc_measurement$554415016$0$pin',1),
+connected('adc_measurement$01412772711$0$pad','adc_measurement$0733134898$0$gch',1),
+connected('adc_measurement$01412772711$0$pad','adc_measurement$554415017$0$pin',1),
+connected('adc_measurement$01412772710$0$pad','adc_measurement$0733134897$0$gch',1),
+connected('adc_measurement$01412772710$0$pad','adc_measurement$554415018$0$pin',1),
+connected('adc_measurement$01725849619$0$rev0','adc_measurement$0445362671$0$signal_in',1),
+connected('adc_measurement$554415016$0$pin','adc_measurement$01412772712$0$pad',1),
+connected('adc_measurement$554415017$0$pin','adc_measurement$01412772711$0$pad',1),
+connected('adc_measurement$554415018$0$pin','adc_measurement$01412772710$0$pad',1),
+connected('digital_io$36800462$0$pin','digital_io$01383135420$0$pad',1),
+connected('digital_io$01383135420$0$pad','digital_io$36800462$0$pin',1),
+connected('digital_io$02001255827$1$pin','digital_io$01893669597$1$pad',1),
+connected('digital_io$01893669597$1$pad','digital_io$02001255827$1$pin',1),
+uri_element_range(DIGITAL_IO1sv0,[0, 1, 2, 3, 4]),
+register_value('digital_io$01893669597$1',iocr_oe,1),
+uri_element_range(DIGITAL_IO0sv0,[0, 1, 2, 3, 4]),
+register_value('digital_io$01383135420$0',iocr_oe,1)],'digital_io$02001255827$1',Result),15,writeln(timeout),all_solution, Timer, Due, Remainder).
+
+
+
+Jun 26, 2021 7:12:39 AM java.util.logging.LogManager$RootLogger log
+INFO: 
+End of solver : getFeasiblePins() :  Difference in ms 27
+
+
+Jun 26, 2021 7:12:39 AM java.util.logging.LogManager$RootLogger log
+INFO: [/devicepackage/0/7, /devicepackage/0/8, /devicepackage/0/29, /devicepackage/0/27, /devicepackage/0/28, /devicepackage/0/22, /devicepackage/0/21, /devicepackage/0/24, /devicepackage/0/23, /devicepackage/0/14, /devicepackage/0/15, /devicepackage/0/12, /devicepackage/0/13, /devicepackage/0/11, /devicepackage/0/31, /devicepackage/0/30, /devicepackage/0/32, /devicepackage/0/19, /devicepackage/0/35, /devicepackage/0/18, /devicepackage/0/17, /devicepackage/0/36, /devicepackage/0/16]
+
+

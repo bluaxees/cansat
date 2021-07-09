@@ -1,0 +1,101 @@
+   1              	 .cpu cortex-m0
+   2              	 .fpu softvfp
+   3              	 .eabi_attribute 20,1
+   4              	 .eabi_attribute 21,1
+   5              	 .eabi_attribute 23,3
+   6              	 .eabi_attribute 24,1
+   7              	 .eabi_attribute 25,1
+   8              	 .eabi_attribute 26,1
+   9              	 .eabi_attribute 30,4
+  10              	 .eabi_attribute 34,0
+  11              	 .eabi_attribute 18,4
+  12              	 .code 16
+  13              	 .file "adc_measurement_conf.c"
+  14              	 .global ADC_MEASUREMENT_0
+  15              	 .global backgnd_config
+  16              	 .global global_result_intr_handle
+  17              	 .global ADC_MEASUREMENT_channel_array
+  18              	 .global global_res_config
+  19              	 .global ADC_MEASUREMENT_Channel_C_handle
+  20              	 .global ADC_MEASUREMENT_Channel_B_handle
+  21              	 .global ADC_MEASUREMENT_Channel_A_handle
+  22              	 .global global_iclass_config
+  23              	 .section .data.ADC_MEASUREMENT_0,"aw",%progbits
+  24              	 .align 2
+  27              	ADC_MEASUREMENT_0:
+  28 0000 00000000 	 .word ADC_MEASUREMENT_channel_array
+  29 0004 00000000 	 .word backgnd_config
+  30 0008 00000000 	 .word global_iclass_config
+  31 000c 00000000 	 .word GLOBAL_ADC_0
+  32 0010 00000000 	 .word global_result_intr_handle
+  33 0014 00000000 	 .word 0
+  34 0018 02       	 .byte 2
+  35 0019 05       	 .byte 5
+  36 001a 00       	 .byte 0
+  37 001b 00       	 .space 1
+  38              	 .section .rodata.global_result_intr_handle,"a",%progbits
+  39              	 .align 2
+  42              	global_result_intr_handle:
+  43 0000 10000000 	 .word 16
+  44 0004 03000000 	 .word 3
+  45              	 .section .rodata.backgnd_config,"a",%progbits
+  46              	 .align 2
+  49              	backgnd_config:
+  50 0000 05       	 .byte 5
+  51 0001 000000   	 .space 3
+  52 0004 00       	 .space 1
+  53 0005 00       	 .byte 0
+  54 0006 00       	 .byte 0
+  55 0007 00       	 .byte 0
+  56 0008 00       	 .byte 0
+  57 0009 000000   	 .space 3
+  58              	 .section .data.ADC_MEASUREMENT_Channel_A_handle,"aw",%progbits
+  61              	ADC_MEASUREMENT_Channel_A_handle:
+  62 0000 00       	 .byte 0
+  63 0001 07       	 .byte 7
+  64              	 .section .rodata.global_iclass_config,"a",%progbits
+  65              	 .align 2
+  68              	global_iclass_config:
+  69 0000 00000000 	 .space 4
+  70              	 .section .data.ADC_MEASUREMENT_Channel_C_handle,"aw",%progbits
+  73              	ADC_MEASUREMENT_Channel_C_handle:
+  74 0000 01       	 .byte 1
+  75 0001 06       	 .byte 6
+  76              	 .section .data.ADC_MEASUREMENT_Channel_B_handle,"aw",%progbits
+  79              	ADC_MEASUREMENT_Channel_B_handle:
+  80 0000 01       	 .byte 1
+  81 0001 05       	 .byte 5
+  82              	 .section .data.ADC_MEASUREMENT_channel_array,"aw",%progbits
+  83              	 .align 2
+  86              	ADC_MEASUREMENT_channel_array:
+  87 0000 00000000 	 .word ADC_MEASUREMENT_Channel_A_handle
+  88 0004 00000000 	 .word ADC_MEASUREMENT_Channel_B_handle
+  89 0008 00000000 	 .word ADC_MEASUREMENT_Channel_C_handle
+  90 000c 00000000 	 .word global_res_config
+  91              	 .section .data.global_res_config,"aw",%progbits
+  92              	 .align 2
+  95              	global_res_config:
+  96 0000 0000     	 .space 2
+  97 0002 00       	 .byte 0
+  98 0003 81       	 .byte 129
+  99              	 .ident "GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20141119 (release) [ARM/embedded-4_9-branch revision 218278]"
+DEFINED SYMBOLS
+                            *ABS*:00000000 adc_measurement_conf.c
+    {standard input}:27     .data.ADC_MEASUREMENT_0:00000000 ADC_MEASUREMENT_0
+    {standard input}:49     .rodata.backgnd_config:00000000 backgnd_config
+    {standard input}:42     .rodata.global_result_intr_handle:00000000 global_result_intr_handle
+    {standard input}:86     .data.ADC_MEASUREMENT_channel_array:00000000 ADC_MEASUREMENT_channel_array
+    {standard input}:95     .data.global_res_config:00000000 global_res_config
+    {standard input}:73     .data.ADC_MEASUREMENT_Channel_C_handle:00000000 ADC_MEASUREMENT_Channel_C_handle
+    {standard input}:79     .data.ADC_MEASUREMENT_Channel_B_handle:00000000 ADC_MEASUREMENT_Channel_B_handle
+    {standard input}:61     .data.ADC_MEASUREMENT_Channel_A_handle:00000000 ADC_MEASUREMENT_Channel_A_handle
+    {standard input}:68     .rodata.global_iclass_config:00000000 global_iclass_config
+    {standard input}:24     .data.ADC_MEASUREMENT_0:00000000 $d
+    {standard input}:39     .rodata.global_result_intr_handle:00000000 $d
+    {standard input}:46     .rodata.backgnd_config:00000000 $d
+    {standard input}:65     .rodata.global_iclass_config:00000000 $d
+    {standard input}:83     .data.ADC_MEASUREMENT_channel_array:00000000 $d
+    {standard input}:92     .data.global_res_config:00000000 $d
+
+UNDEFINED SYMBOLS
+GLOBAL_ADC_0
